@@ -1,0 +1,23 @@
+body {
+    background-color: antiquewhite;
+}
+
+input:focus {
+    background-color: orchid;
+    color: black;
+}
+
+input {
+    background-image: url();
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    caret-color: orange;
+}
+
+/* textarea {
+    resize: none;
+} */
+
+fieldset {
+    background: linear-gradient(orange,red);
+}

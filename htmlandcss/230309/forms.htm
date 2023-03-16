@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    forms are used to collect the users information. all elements placed inside the form tag will be placed inside the form container. default character width for input is 20 characters.
+    check out<a href="https://fonts.google.com/icons">material icons</a>
+    <form id="registration" action="">
+        <!-- for="" in label ties it to the corresponding input tag -->
+        
+        <label for="inputname" >name</label><br>
+        <input id="inputname" type="text" autofocus><br>
+        <label for="passw">password</label><br>
+        <input type="password" minlength="8" name="" id="passw" required><br>
+        <label for="inputemail">email</label><br>
+        <input type="email" name="" id="inputemail"><br>
+        <label for="">Send feedback</label><br>
+        <textarea style="resize: none;" name="" id="" cols="30" rows="10" placeholder="please send us your precious feedback"></textarea><br>
+        <label for="">Send feedback</label><br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="please send us your precious feedback" readonly></textarea><br>
+        <label for="">Send feedback</label><br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="please send us your precious feedback" disabled></textarea><br>
+        <label for="">Send feedback</label><br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="please send us your precious feedback" disabled></textarea><br>
+        <label for="">select your mode of transporation</label>
+        <select name="" id="" form="registration">
+            <option value="'" disabled selected>Choose a vehicle</option>
+            <option value="1">motorcycle</option>
+            <option value="2">car</option>
+        </select>
+    </form>
+    <fieldset>
+        <legend>personal information</legend>
+        <form action="">
+            <label for="">First name</label><br>
+            <input type="text" name="" id=""><br>
+            <label for="">Last name</label><br>
+            <input type="text" name="" id=""><br>
+            <input type="button" value="clear">
+            <input type="submit" value="submit">
+            <button>next</button>
+        </form>
+    </fieldset>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+chrome extensions
+    Grepper
+        https://chrome.google.com/webstore/detail/grepper/amaaokahonnfjjemodnpmeenfpnnbkco?hl=en
+        Hooker seg inn på google søk etter code
+    
+    Lighthouse
+        https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en
+        Performance vurdering av en webside
+    
+Link til resource med extra content
+    https://github.com/sindresorhus/awesome
+
+Små snippets av kode  med eksempler
+    Littlesnippets.net
+
+Kan du bruke css/js 
+    https://caniuse.com/
+
+Lag en blop
+    https://www.blobmaker.app/
+
+klipp og lim box-shadow
+    https://getcssscan.com/css-box-shadow-examples
+
+Svg
+    https://app.haikei.app/
+
+Teste ut backend api etc
+    extension for vs code
+    https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client
+
+Pitch brief generator - kom opp med ideer!
+    https://goodbrief.io/
+
+
+
+Notes:
+Chrome extensions:
+    GREPPER
+    Lighthouse i devtools!
+    JSON Formatter
+    Responsive Viewer
+    React Developer Tools
+    Outliner CSS
+
+Websites:
+    https://fonts.google.com/
+    https://github.com/sindresorhus/awesome
+    https://www.littlesnippets.net/
+    https://bootsnipp.com/
+    https://codepen.io/spark
+    https://caniuse.com/
+    https://www.blobmaker.app/
+    https://getcssscan.com/css-box-shadow-examples
+    https://app.haikei.app/
+    https://validator.w3.org/
+    https://www.cssdesignawards.com/
+    https://www.thunderclient.com/
+    https://lhammer.cn/You-need-to-know-css/#/
+    http://ianlunn.github.io/Hover/

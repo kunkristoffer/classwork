@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <g id="ideogram-48" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="ideogram-85" stroke="#32fcb3" stroke-width="2">
+            <g id="brightness-46" transform="translate(2.000000, 2.000000)">
+                <path d="M0,22 L4,22" id="Shape"></path>
+                <path d="M6.444,6.444 L9.272,9.272" id="Shape"></path>
+                <path d="M22,0 L22,4" id="Shape"></path>
+                <path d="M37.556,6.444 L34.728,9.272" id="Shape"></path>
+                <path d="M44,22 L40,22" id="Shape"></path>
+                <path d="M37.556,37.556 L34.728,34.728" id="Shape"></path>
+                <path d="M22,44 L22,40" id="Shape"></path>
+                <path d="M6.444,37.556 L9.272,34.728" id="Shape"></path>
+                <circle id="Oval" cx="22" cy="22" r="12"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

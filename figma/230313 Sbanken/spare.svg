@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <g id="ideogram-48" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="ideogram-24" stroke="#32fcb3" stroke-width="2">
+            <g id="pig" transform="translate(2.000000, 2.000000)">
+                <path d="M22,20 L30,20" id="Shape"></path>
+                <circle id="Oval" cx="26" cy="4" r="4"></circle>
+                <circle id="Oval" cx="13" cy="23" r="1"></circle>
+                <path d="M44,26.5 C44,19.596 38.404,14 31.5,14 L17.5,14 C17.336,14 17,14 17,14 C14.493,8.128 9,10 9,10 L10.717,16.01 C8.52,17.433 6.806,19.528 5.847,22 L0,22 L0,32 L6.288,32 C7.822,35.12 10.611,37.51 14,38.5 L14,44 L21,44 L21,39 L28,39 L28,44 L35,44 L35,38.494 C40.198,36.979 44,32.187 44,26.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

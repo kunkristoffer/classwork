@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+        body {
+            background-color: #131316;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content:space-around;
+            flex-direction: column;
+        }
+
+/* ---------------------------------------------------------------------------------------------------------------------
+Here we are gonna see how animations work in general as well as look how it can affect sudo elements such as ::after
+------------------------------------------------------------------------------------------------------------------------ */
+        .one {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: brown;
+            animation-name: bgcolor;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .one:after {
+            content: 'sudo element';
+            display: block; /* du må ha med display:block eller inline for at dette skal funke */
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            animation-name: sudo;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        /* @keyframes bgcolor {
+            from {background-color: brown;}
+            to {background-color: blue;}
+        } */
+        @keyframes bgcolor {
+            0% {background-color: brown;}
+            20% {background-color: beige; color: #131316;}
+            40% {background-color: chartreuse; width: 200px;}
+            60% {background-color: darkorchid; text-align: center;}
+            80% {background-color: yellow;}
+            100% {background-color: blue;}
+        }
+
+        @keyframes sudo {
+            0% {background-color: #333;}
+            80% {background-color: #fff; color:#000}
+            100% {background-color: #000;}
+        }
+
+/* ---------------------------------------------------------------------------------------------------------------------
+We can use animate to fill containers. however it will overshadow the content of parent
+------------------------------------------------------------------------------------------------------------------------ */
+
+        .two {
+            background-color:darkred;
+            color: #131316;
+            width: 200px;
+            height: 60px;
+            border: gray solid 2px;
+            border-radius: 5px;
+            position: relative;            
+        }
+        .two::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background-color: gray;
+            top: 30%;
+            right: -5%;
+            
+        }
+        .two::before {
+            content: '';
+            width: 98%;
+            height: 98%;
+            border-radius: 5px;
+            background-color: green;
+            position: absolute;
+            top: 1%;
+            left: 1%;
+            animation: 3s battery infinite linear;
+        }
+
+        @keyframes battery {
+            0% {width: 5%;}
+            50% {width: 50%;}
+            100% {width: 98%;}
+        }
+
+/* ---------------------------------------------------------------------------------------------------------------------
+Just a small borderradius test, check comment
+------------------------------------------------------------------------------------------------------------------------ */
+
+        .three {
+            background-color: darkmagenta;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 45px; 
+            /* Border radius i parent bør være child's radus + parent marging*/
+        }
+        .three div {
+            background-color: darkolivegreen;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+        }
+
+/* ---------------------------------------------------------------------------------------------------------------------
+Gallery example from the class. notice the use of transform in .gallery span
+------------------------------------------------------------------------------------------------------------------------ */
+        .four {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 500px;
+            background: #000;
+        }
+
+        .gallery {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 50px;
+            transform-style: preserve-3d;
+            animation: infinite galrotate 10s linear;
+        }
+
+        @keyframes galrotate {
+            from {transform: perspective(1200px)rotateY(0deg);}
+            to {transform: perspective(1200px)rotateY(360deg);}
+        }
+        .gallery span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* top: 0;
+            left: 0; */
+            transform-origin: center;
+            transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+        }
+
+        .gallery span img {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            /* top: 0;
+            left: 0; */
+        }
+
+/* ---------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------ */
+    </style>
+</head>
+<body>
+    <div class="one">ONE</div><br><br>
+    <div class="two"></div>
+    <div class="three"><div></div></div>
+    <div class="four">
+        <div class="gallery">
+            <span style="--i:1;"><img src="https://images.unsplash.com/photo-1678489820694-df1b1388dd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt=""></span>
+            <span style="--i:2;"><img src="https://images.unsplash.com/photo-1678597413491-934bc5d0fc66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt=""></span>
+            <span style="--i:3;"><img src="https://images.unsplash.com/photo-1678489819868-9a8136044b00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt=""></span>
+            <span style="--i:4;"><img src="https://images.unsplash.com/photo-1678560482177-445935d68c43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80" alt=""></span>
+            <span style="--i:5;">
+                <img src="" alt="">
+            </span>
+            <span style="--i:6;">
+                <img src="" alt="">
+            </span>
+            <span style="--i:7;">
+                <img src="" alt="">
+            </span>
+            <span style="--i:8;">
+                <img src="" alt="">
+            </span>
+
+        </div>
+    </div>
+</body>
+</html>

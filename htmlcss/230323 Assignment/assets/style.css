@@ -165,11 +165,6 @@ main {
 .threethree {
     grid-area: span 3 / span 3;
 }
-
-
-footer {
-    background-color: red;
-}
 #registrationform {
     position: fixed;
     display: flex;
@@ -212,20 +207,10 @@ footer {
     flex-flow: column nowrap;
     border: none;
 }
-.registrationform fieldset div {
-    /* background-color: #091bb8; */
-}
-/* legend {
-    background-color: gray;
-    color: red;
-    padding: 5px 10px;
-} */
 label {
     margin: 10px;
     color: #f37b56;
 }
-
-
 input[type=email],
 input[type=text],
 input[type=date] {
@@ -249,8 +234,4 @@ input[type=submit]:focus {
   background: #f79577;
   cursor: pointer;
   outline: none;
-}
-
-.registrationform fieldset div {
- 
 }

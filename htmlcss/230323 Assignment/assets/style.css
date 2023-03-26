@@ -203,7 +203,7 @@ footer {
     flex-flow: nowrap column;
     justify-content: center;
     top:0;
-    right: 0;
+    right: 50px;
     height: 100%;
     max-width: 400px;
 }

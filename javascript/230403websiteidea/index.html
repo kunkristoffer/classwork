@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cwdt calc</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="cwdtinput">
+                <fieldset>
+                <legend>Configuration</legend>
+                <label for="inputLife">Life</label>
+                <input type="number" name="" id="inputLife" value="2000" required>
+                <label for="inputEnergy">Energy shield</label>
+                <input type="number" name="" id="inputEnergy" value="160" required>
+                <label for="inputWard">Ward</label>
+                <input type="number" name="" id="inputWard" value="1000" required>
+                <label for="inputChaos">Chaos resistance</label>
+                <input type="number" name="" id="inputChaos" value="-60" required>
+                <label for="inputHeartbound">
+                    <input type="checkbox" name="" id="inputHeartbound">2x Heartbound
+                </label>
+                <label for="inputSkeleton">
+                    <input type="checkbox" name="" id="inputSkeleton">lvl 21 skeletons
+                </label>
+                <label for="inputForbiddenrite">
+                    <input type="checkbox" name="" id="inputForbiddenrite" checked>Forbidden rite
+                </label>
+                <input type="submit" value="Calculate" onclick="updateValue()">
+                <div id="cwdtcalc" style="text-align: center; color: orange; font-size: 1.5em; margin-top: 20px;">
+                    tbd
+                </div>
+                </fieldset>
+            </div>
+            <div id="cwdttable">
+                <!-- https://returnx.github.io/cwdt/ -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

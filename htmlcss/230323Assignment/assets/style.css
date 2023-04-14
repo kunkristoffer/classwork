@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 16px;
+    min-height: 100vh;
+}
+.flex {
+    display:flex;
+}
+.hidden {
+    display: none;
+}
+header {
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    height: 100%;
+    background-color: #131316;
+    transition: left 0.3s ease-in-out;
+    left: -250px;
+}
+header:hover{
+    left:0
+}
+main {
+    /* background-image: url(media/background1.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; */
+    transition: filter 0.3s ease-in-out;
+}
+header:hover + main {
+    filter: blur(5px) brightness(0.5);;
+}
+.nav-cont {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-around;
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 300px; 
+}
+.nav-button {
+    background-color: #131316;
+    text-align: center;
+    font-size: x-large;
+    padding: 25px;
+}
+.nav-button:hover{
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.nav-button a {
+    text-decoration: none;
+    color: chocolate;
+    text-transform: uppercase;
+}
+.nav-expanded {
+    overflow: hidden;
+    transition: all 1s ease-in-out 0s; 
+    max-height: 0;
+}
+.nav-button:hover .nav-expanded {
+    max-height: 1000px;
+}
+.nav-expanded a {
+    color: rgb(102, 54, 19);
+    font-weight: 500;
+    display: block;
+}
+.nav-expanded a:hover {
+    text-decoration: underline;
+}
+.nav-colapsed {
+    flex-grow: 0.001;
+}
+.nav-ruler {
+    background-color: #131316;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    width: 50px;
+}
+.nav-ruler div {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    margin-left: -40px;
+}
+.nav-ruler p {
+    text-transform: uppercase;
+    color: chocolate;
+}
+main {
+    margin: 0 5px 0 50px;
+}
+#recipeshowcase {
+    display:grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 200px);
+    grid-gap: 10px;
+    padding: 10px;
+}
+#recipeshowcase > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center;
+}
+.recipe {
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+.recipe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.3s;
+}
+.recipe-t {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffff9c;
+    color: #131316;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+/*  note to self - List over animatable properties
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties */
+
+.recipe:hover > .recipe-t {
+    opacity: 1;
+    visibility: visible;
+}
+.recipe:hover img {
+    scale: 1.1;
+}
+.recipe:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.twotwo {
+    grid-area: span 2 / span 2;
+}
+.twoone {
+    grid-area: span 1 / span 2;
+}
+.onetwo {
+    grid-area: span 2 / span 1;
+}
+.threethree {
+    grid-area: span 3 / span 3;
+}
+#registrationform {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+.registrationform {
+    position: relative;
+    min-width: 300px;
+}
+.registrationform img {
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+    .registrationform img {
+        display: none;
+    }
+    .registrationform fieldset {
+        background-color: #fff;
+        padding: 50px;
+    }
+  }
+.registrationcont {
+    position: absolute;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    top:0;
+    right: 50px;
+    height: 100%;
+    max-width: 400px;
+}
+.registrationform fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    border: none;
+}
+label {
+    margin: 10px;
+    color: #f37b56;
+}
+input[type=email],
+input[type=text],
+input[type=date] {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 10px;
+  font-size: 2em;
+  border-bottom: 2px solid #f37b56;
+}
+input[type=submit] {
+  background: #f37b56;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px;
+  width: 50%;
+}
+input[type=submit]:hover,
+input[type=submit]:focus {
+  background: #f79577;
+  cursor: pointer;
+  outline: none;
+}

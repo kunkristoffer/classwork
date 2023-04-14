@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 27. March 2023</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>
+        window.addEventListener('mouseup',function(event){
+                var pol = document.getElementById('test');
+                var pol2 = document.getElementById('registrationform');
+                if(event.target != pol && event.target.parentNode != pol){
+                    pol2.style.display = 'none';
+                }
+        });  
+    </script>
+</head>
+<body>
+<header>
+    <nav class="nav-cont">
+        <div class="nav-button">
+            <a href="">Home</a>
+        </div>
+        <div class="nav-button">
+            <a href="">Recipes</a>
+            <div class="nav-expanded">
+                <a href="">Breakfast</a>
+                <a href="">Brunch</a>
+                <a href="">Lunch</a>
+                <a href="">Dinner</a>
+                <a href="">Supper</a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="">Menus</a>
+        </div>
+        <div class="nav-button">
+            <a href="">Ingridients</a>
+            <div class="nav-expanded">
+                <a href="">Chicken</a>
+                <a href="">Pork</a>
+                <a href="">Beef</a>
+                <a href="">Fish</a>
+                <a href="">Seafood</a>
+                <a href="">Rest food calc</a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="">Dietary</a>
+            <div class="nav-expanded">
+                <a href="">Dairy-Free</a>
+                <a href="">Gluten-Free</a>
+                <a href="">Vegan</a>
+                <a href="">Vegetarian</a>
+                <a href="">Other</a>
+            </div>
+        </div>
+        <div class="nav-button">
+            <a href="">Events</a>
+        </div>
+        <div class="nav-button">
+            <a href="">Blog</a>
+        </div>
+        <div class="nav-button">
+            <a href="">About us</a>
+        </div>
+        <div class="nav-button">
+            <a href="">Privacy</a>
+        </div>
+    </nav>
+    <div class="nav-ruler">
+        <div><p>open menu</p></div>
+    </div>
+</header>
+<main>
+    <section id="recipeshowcase" onClick="document.getElementById('registrationform').style.display='flex'">
+        <div class="recipe twotwo">
+            <img src="assets/media/1.avif" alt="Burger with padding cheese ham and egg">
+            <div class="recipe-t">
+                <h1>Burgers</h1>
+                <p>Mindblowing explosions of tastes</p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/2.avif" alt="assorted slized citrus fruits">
+            <div class="recipe-t">
+                <h1>Citrus</h1>
+                <p>Juice it</p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/3.avif" alt="multiple grill spears layed out on a platter">
+            <div class="recipe-t">
+                <h1>Grill sticks</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/4.avif" alt="a very fancy looking plate with some little food on it">
+            <div class="recipe-t">
+                <h1>Plating</h1>
+            </div>
+        </div>
+        <div class="recipe twoone">
+            <img src="assets/media/5.avif" alt="A beef steak with garnish and sauce">
+            <div class="recipe-t">
+                <h1>The perfect steak</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/6.avif" alt="Soup with chucky parts of vegetables in a bowl">
+            <div class="recipe-t">
+                <h1>Winter soups</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/7.avif" alt="Fruit platter with cheese">
+            <div class="recipe-t">
+                <h1>Wine tasting extras</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/8.avif" alt="A fried chicken burger on a platter">
+            <div class="recipe-t">
+                <h1>Fried Chicken burgers</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/9.avif" alt="Three plates with pasta">
+            <div class="recipe-t">
+                <h1>Pasta for all</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/10.avif" alt="a stack of french toasts with blueberries and bannana">
+            <div class="recipe-t">
+                <h1>French toast</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/11.avif" alt="wallpaper with fruits and veggies">
+            <div class="recipe-t">
+                <h1>insta food</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/12.avif" alt="Breakfast menu with 4 bowls">
+            <div class="recipe-t">
+                <h1>Breakfast valentines</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/13.avif" alt="3 dumplings on a wooden plate">
+            <div class="recipe-t">
+                <h1>Steamed Dumplings</h1>
+            </div>
+        </div>
+        <div class="recipe onetwo">
+            <img src="assets/media/14.avif" alt="">
+            <div class="recipe-t">
+                <h1>Icecream</h1>
+                <p>Icream, Ucream, Wecream for Icecream</p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/15.avif" alt="A bowl of cerials with assorted fruits">
+            <div class="recipe-t">
+                <h1>Cerials</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/16.avif" alt="A table with multiple breakfast dishes on it to celebrate easter">
+            <div class="recipe-t">
+                <h1>Easter arrangements</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/17.avif" alt="A picture of a table with items along the edges">
+            <div class="recipe-t">
+                <h1>wrong picture lol</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/18.avif" alt="Pancakes with blueberries">
+            <div class="recipe-t">
+                <h1>Pancakes</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/19.avif" alt="Soft-shell tacos getting drizzled with lime">
+            <div class="recipe-t">
+                <h1>Autentic tacos</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/20.avif" alt="A pizza slized up on a cutting board">
+            <div class="recipe-t">
+                <h1>Pizzas</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/21.avif" alt="Two pieces of salmon in sauce">
+            <div class="recipe-t">
+                <h1>Salmon extrordinare</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/22.avif" alt="I'm not even sure what this is">
+            <div class="recipe-t">
+                <h1>Excotic foods</h1>
+            </div>
+        </div>
+        <div class="recipe threethree">
+            <img src="assets/media/23.avif" alt="">
+            <div class="recipe-t">
+                <h1>How to lead a healthy lifestyle</h1>
+                <p>To lead means to take charge and guide. By deciding to lead a healthy life, you're deciding to assume command over your own habits and actions. Take care of the basics by eating, exercising, and sleeping. Build a system you can sustain by integrating healthy habits into every part of your routine. Enlist your friends and your doctor to help you stay on track. </p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/24.avif" alt="">
+            <div class="recipe-t">
+                <h1>Drinks</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/25.avif" alt="">
+            <div class="recipe-t">
+                <h1>Murder</h1>
+                <p>We asked dexter for help</p>
+            </div>
+        </div>
+        <div class="recipe twotwo">
+            <img src="assets/media/1.avif" alt="Burger with padding cheese ham and egg">
+            <div class="recipe-t">
+                <h1>Burgers</h1>
+                <p>Mindblowing explosions of tastes</p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/2.avif" alt="assorted slized citrus fruits">
+            <div class="recipe-t">
+                <h1>Citrus</h1>
+                <p>Juice it</p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/3.avif" alt="multiple grill spears layed out on a platter">
+            <div class="recipe-t">
+                <h1>Grill sticks</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/4.avif" alt="a very fancy looking plate with some little food on it">
+            <div class="recipe-t">
+                <h1>Plating</h1>
+            </div>
+        </div>
+        <div class="recipe twoone">
+            <img src="assets/media/5.avif" alt="A beef steak with garnish and sauce">
+            <div class="recipe-t">
+                <h1>The perfect steak</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/6.avif" alt="Soup with chucky parts of vegetables in a bowl">
+            <div class="recipe-t">
+                <h1>Winter soups</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/7.avif" alt="Fruit platter with cheese">
+            <div class="recipe-t">
+                <h1>Wine tasting extras</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/8.avif" alt="A fried chicken burger on a platter">
+            <div class="recipe-t">
+                <h1>Fried Chicken burgers</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/9.avif" alt="Three plates with pasta">
+            <div class="recipe-t">
+                <h1>Pasta for all</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/10.avif" alt="a stack of french toasts with blueberries and bannana">
+            <div class="recipe-t">
+                <h1>French toast</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/11.avif" alt="wallpaper with fruits and veggies">
+            <div class="recipe-t">
+                <h1>insta food</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/12.avif" alt="Breakfast menu with 4 bowls">
+            <div class="recipe-t">
+                <h1>Breakfast valentines</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/13.avif" alt="3 dumplings on a wooden plate">
+            <div class="recipe-t">
+                <h1>Steamed Dumplings</h1>
+            </div>
+        </div>
+        <div class="recipe onetwo">
+            <img src="assets/media/14.avif" alt="">
+            <div class="recipe-t">
+                <h1>Icecream</h1>
+                <p>Icream, Ucream, Wecream for Icecream</p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/15.avif" alt="A bowl of cerials with assorted fruits">
+            <div class="recipe-t">
+                <h1>Cerials</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/16.avif" alt="A table with multiple breakfast dishes on it to celebrate easter">
+            <div class="recipe-t">
+                <h1>Easter arrangements</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/17.avif" alt="A picture of a table with items along the edges">
+            <div class="recipe-t">
+                <h1>wrong picture lol</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/18.avif" alt="Pancakes with blueberries">
+            <div class="recipe-t">
+                <h1>Pancakes</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/19.avif" alt="Soft-shell tacos getting drizzled with lime">
+            <div class="recipe-t">
+                <h1>Autentic tacos</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/20.avif" alt="A pizza slized up on a cutting board">
+            <div class="recipe-t">
+                <h1>Pizzas</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/21.avif" alt="Two pieces of salmon in sauce">
+            <div class="recipe-t">
+                <h1>Salmon extrordinare</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/22.avif" alt="I'm not even sure what this is">
+            <div class="recipe-t">
+                <h1>Excotic foods</h1>
+            </div>
+        </div>
+        <div class="recipe threethree">
+            <img src="assets/media/23.avif" alt="">
+            <div class="recipe-t">
+                <h1>How to lead a healthy lifestyle</h1>
+                <p>To lead means to take charge and guide. By deciding to lead a healthy life, you're deciding to assume command over your own habits and actions. Take care of the basics by eating, exercising, and sleeping. Build a system you can sustain by integrating healthy habits into every part of your routine. Enlist your friends and your doctor to help you stay on track. </p>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/24.avif" alt="">
+            <div class="recipe-t">
+                <h1>Drinks</h1>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="assets/media/25.avif" alt="">
+            <div class="recipe-t">
+                <h1>Murder</h1>
+                <p>We asked dexter for help</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="registrationform">
+            <div id="test" class="registrationform">
+                <img src="assets/media/11.avif" alt="wallpaper with fruits and veggies">
+                <div class="registrationcont">
+                    <form action="">
+                        <fieldset>
+                            <h2>Welcome to WeLoveFood inc</h2>
+                            <p>Please log in or register an account to post comments. You can also sign up for our incredible delicious newsletter where we share our favorite recipes weekly</p>
+                            <label for="fname">First name</label>
+                            <input type="text" id="fname" name="fname">
+                            <label for="lname">Last name</label>
+                            <input type="text" id="lname" name="lname">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                            <label for="birthday">Birthday</label>
+                            <input type="date" id="birthday" name="birthday">
+                            <div style="width: 100%;">
+                                <input type="submit" value="Log in"><input type="submit" value="Register">
+                            </div>
+                        </fieldset>
+                    </form> 
+                </div>
+            </div>
+        </div>        
+        <div class="hidden">
+            <H1>Website ideas</H1>
+            <p style='white-space: pre;'>White-space:pre; gjør p om til pre men fucker med width :D</p>
+            <p style="white-space: pre;">
+            Tenker en webside med statisk stort parallax bilde, med slideshow over. Bruk eksempel på animation 3d perspective.
+            Bruk flexbox generelt på siden med direction row.
+            Hva skal jeg putte inni grid?
+                testimonials?
+                bruke animations på å flytte ting rundt når du hovrer? margin?
+        
+            Html forms? lage en registration side?
+        
+            Mat side der du finner en oppskrift + kan ligge igjen en kommentar?
+        
+            Singlepage 100% ? desktop app?
+                static menny venstre side, ekspanderer over content? blur/fade siden?
+            </p>
+        
+            <ul>
+            HTML Forms
+            Pseudo elements
+            CSS Animations
+            CSS Transitions
+            Flex
+            Grid
+            box-sizing?
+            shadows ( check notes from 21 century )
+            https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+            
+            </ul>
+        
+            <H1>Links for use</H1>
+            https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+            https://codepen.io/thomas-eilermann/pen/grjEjE
+        
+            <h1>design ideas</h1>
+            <p>check out the jumping faces <a href="https://generated.photos/">design</a></p>
+            <p>generate useravatars from <a href="https://adityar224.github.io/Random-Face-Generator/#/">Generated faces</a></p>
+            <p>Bruk form ideas fra <a href="https://freefrontend.com/css-forms/">freefrontend</a></p>
+        </div>
+    </footer>
+</main>
+</body>
+</html>

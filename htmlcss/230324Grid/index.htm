@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex and grid</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #131316;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            font-size: 16px;
+        }
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: #3474e6;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 30px;
+
+        }
+        .nav-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        .nav-bar .container ul {
+            display: flex;
+        }
+        .nav-bar .container ul li {
+            margin: 0 20px;
+        }
+        .nav-bar {
+            background-color: #3799c7;
+            height: 60px;
+        }
+        .nav-bar ul {
+            list-style-type: none;
+        }
+        .nav-bar .logo {
+            font-size: x-large;
+            font-weight: 700;
+        }
+        .nav-bar a {
+            text-decoration: none;
+        }
+        .nav-bar a:hover {
+            background-color: white;
+            color: #3474e6;
+            padding: 10px;
+        }
+        header .container {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="logo">Flexbox</div>
+            <ul>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">Home</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">About</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <div>
+                <h1>Flexbox crash course</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, est!</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1679560271870-e8f4eb3314da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1514&q=80" alt="">
+        </div>
+    </header>
+    <section class="boxes">
+        <div class="container">
+            <div class="box">
+                <h2>Flexbox properties</h2>
+                <p>Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex item as primarily layiung out either in horizontal</p>
+            </div>
+            <div class="box">
+                <h2>Flexbox properties</h2>
+                <p>Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex item as primarily layiung out either in horizontal</p>
+            </div>
+            <div class="box">
+                <h2>Flexbox properties</h2>
+                <p>Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex item as primarily layiung out either in horizontal</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

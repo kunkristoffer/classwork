@@ -91,6 +91,6 @@ const updateArray = (a,s) => {
     // return [...new Set([...a, ...s])]
     return a.concat(s).filter(
             (item, pos, a) => a.lastIndexOf(item) === a.indexOf(item)
-        );
+    );
 };
 console.log(updateArray(["Red", "Green", "Orange"], "Blue Orange Red Yellow"))

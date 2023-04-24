@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --bluedark:hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --mobile: 375px;
+    --desktop: 1440px;
+}
+
+body {
+    background-color: #1d1d1d;
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--bluedark);
+}
+
+.container {
+    padding: 0 30px;
+    margin: 30px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    border-radius: 15px;
+    background-color: var(--cream);
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.img img {
+    max-width: 100%;
+}
+
+.card-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+h6 {
+    color: var(--grey);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height: 1em;
+    color: var(--bluedark);
+}
+
+p {
+    line-height: 1.6em;
+    color: var(--bluedark);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price-current {
+    color: var(--cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    padding: 35px;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+.btn {
+    background-color: var(--cyan);
+    color: var(--white);
+    border: none;
+    padding: 14px 0;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(158, 43%, 49%);
+}
+
+.btn img {
+    padding-right: 10px;
+}

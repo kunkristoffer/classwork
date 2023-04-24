@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app2.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #131316;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            font-size: 16px;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        main {
+            width: 40rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 0 auto;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-flow: nowrap row;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        fieldset {
+            max-width: 30%;
+            padding: 20px;
+            display: flex;
+            flex-flow: wrap column;
+        }
+        #output {
+            background-color: #222;
+            max-width: 50vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        #output div {
+            padding: 2px 10px;
+            text-align: center;
+        }
+        #output div:hover {
+            background-color: #333;
+        }
+
+        #inputs {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="cwdtinput">
+                <fieldset>
+                <legend>Configuration</legend>
+                <label for="inputLife">
+                    Life
+                    <input type="number" name="" id="inputLife" value="2000" required>
+                </label>
+                <label for="inputEnergy">
+                    Energy shield
+                    <input type="number" name="" id="inputEnergy" value="160" required>
+                </label>
+                <label for="inputWard">
+                    Ward
+                    <input type="number" name="" id="inputWard" value="1000" required>
+                </label>
+                <label for="inputChaos">
+                    Chaos resistance
+                    <input type="number" name="" id="inputChaos" value="-60" required>
+                </label>
+                <label for="divergentCheckbox">
+                    <input type="checkbox" name="" id="divergentCheckbox">
+                    Divergent CWDT
+                </label>
+                <label for="divergentQuality" style="display: none;">
+                    Divergent qual%
+                    <input type="number" name="" id="divergentQuality" value="20" required>
+                </label>
+                <label for="inputHeartbound">
+                    <input type="checkbox" name="" id="inputHeartbound">
+                    2x Heartbound
+                </label>
+                <label for="inputSkeleton">
+                    <input type="checkbox" name="" id="inputSkeleton">
+                    lvl 21 skeletons
+                </label>
+                <label for="inputForbiddenrite">
+                    <input type="checkbox" name="" id="inputForbiddenrite" checked>
+                    Forbidden rite
+                </label>
+                <input type="submit" value="Calculate" onclick="updateValue()">
+                <div id="cwdtcalc" style="text-align: center; color: orange; font-size: 1.5em; margin-top: 20px;">
+                    tbd
+                </div>
+                </fieldset>
+            </div>
+            <div id="output">
+                <!-- https://returnx.github.io/cwdt/ -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

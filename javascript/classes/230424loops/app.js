@@ -43,6 +43,12 @@ for (let i = 0 ; i < 10 ; i++) {
     console.log(`Number was not: ${i}`);
 }
 
+// Evig loop, men du bruker hopper ut
+while (true) {
+    
+}
+
+
 // DRY - Don't repeat yourself
 // hvis du har en verdi som ofte gjentar seg, sitt heller en masterverdi
 

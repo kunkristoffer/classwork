@@ -1,0 +1,69 @@
+body {
+  background: black;
+  color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  letter-spacing: -0.1em;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  background: red;
+}
+
+.nav-item {
+  width: 100px;
+  height: 50px;
+  background: blue;
+  border: green 1px solid;
+  display: inline-block;
+}
+
+p {
+  color: grey;
+  letter-spacing: 0.3em;
+  font-family: "Times New Roman", Times, serif;
+  text-align: right;
+}
+
+img {
+  width: 400px;
+  height: 200px;
+}
+
+.container {
+  border: solid 5px green;
+  margin-top: 5px;
+}
+
+@keyframes goku {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.goku {
+  animation: goku 4s infinite;
+}
+
+@keyframes goku2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+.goku2 {
+  animation: goku2 1s infinite linear;
+}

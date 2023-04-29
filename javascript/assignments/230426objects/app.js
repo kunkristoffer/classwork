@@ -179,11 +179,11 @@ console.log(helloChecker("test6"));
  * and letters matching charB will be replaced with charA. See the expected console log comments below.*/
 
 function doubleSwap(string, charA, charB) {
-	output = [];
+	let output = [];
 	for (let letter of string) {
-		if (letter == charA) {
+		if (letter.toUpperCase() == charA.toUpperCase()) {
 			output.push(charB)
-		} else if (letter == charB) {
+		} else if (letter.toUpperCase() == charB.toUpperCase()) {
 			output.push(charA)
 		} else {
 			output.push(letter)

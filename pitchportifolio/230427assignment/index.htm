@@ -6,9 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index_files/style.css">
+    <style>
+      .anchor:hover .tooltip {
+          display: block;
+      }
+      .tooltip {
+          z-index: 2;
+          display: none;
+          position: absolute;
+          margin-left: 28px;
+          padding: 10px;
+          max-width:400px;
+          min-height:10px;
+          background-color: #fff;
+          color: #000;
+          border: 2px solid black;
+          border-radius: 6px;
+          font-size: 1.2rem;
+          font-family: Arial, Helvetica, sans-serif;
+          line-height: 1.5rem;
+      }
+    </style>
   </head>
   <body>
-    <nav>
+    <nav class="anchor">
       <div class="nav-item">
         <a href=""><p>Home</p></a>
       </div>
@@ -24,34 +45,75 @@
       <div class="nav-item">
         <a href="#contact"><p>Contact</p></a>
       </div>
+      <span class="tooltip">
+        Navbar has issues with both color balance and alignment of the navigation buttons.</br></br>
+        Button text shouldn't be aligned top-right
+      </span>
     </nav>
-    <h1>Welcome to my portfolio</h1>
-    <div class="container">
-      <h2 id="about">About me</h2>
-      <p>
-        Welcome to my portfoljo webshite! I'm a front-end develper. I have a
-        lott of experianse in HTML, CSS, and Javaskript. I make beautifull
-        websights that are both fun and funcsjonal You can see my work in my
-        portfoljo so take a look around and let me know what you think! Thnaks
-        for visitting!
-      </p>
-      <img class="goku" src="index_files/Goku-png-transparent.webp" alt="">
-      <img class="goku2" src="index_files/goku-ssj-namek-ssj-fighterz-cb-1-palette-png-clipart.jpg" alt="">
+    <div class="anchor">
+      <h1>Welcome to my portfolio</h1>
+      <span class="tooltip">Letterspacing is too small and there is no margin-left</span>
     </div>
     <div class="container">
+      <div class="anchor">
+        <h2 id="about">About me</h2>
+        <p>
+          Welcome to my portfoljo webshite! I'm a front-end develper. I have a
+          lott of experianse in HTML, CSS, and Javaskript. I make beautifull
+          websights that are both fun and funcsjonal You can see my work in my
+          portfoljo so take a look around and let me know what you think! Thnaks
+          for visitting!
+        </p>
+        <span class="tooltip">
+          Paragraph styling has too much letter spacing</br></br>
+          Unnecessary use of border boxes
+        </span>
+      </div>
+      
+      <div style="display: flex;">
+        <div class="anchor">
+          <img class="goku" src="index_files/Goku-png-transparent.webp" alt="">
+          <span class="tooltip">
+            Sudden appearance instead of fade-in-out</br></br>
+            Background should be transparent according to image
+          </span>
+        </div>
+        <div class="anchor">
+          <img class="goku2" src="index_files/goku-ssj-namek-ssj-fighterz-cb-1-palette-png-clipart.jpg" alt="">
+          <span class="tooltip">Distracting use of scale/move attribute</span>
+        </div>
+      </div>
+      
+      
+      
+    </div>
+    <div class="container anchor">
       <h2 id="projects">Projects</h2>
       <img src="index_files/TicTacToe.jpg" alt="">
       <img src="index_files/q54sj6blz6155goee4jd.jpg" alt="">
       <img src="index_files/etoajz7nokwmphl1jonw.jpg" alt="">
+      <span class="tooltip">Images of projects has either no description or links to view the site.</br></br> Viewers won't be able to properly judge the content from small images.</span>
     </div>
-    <div id="skills" class="container">
+    <div id="skills" class="container anchor">
       <h2>Skills</h2>
       <p>html, css, figma, javascript, react</p>
+      <span class="tooltip">Suddenly changes to RTL text</span>
     </div>
-    <div id="contact" class="container">
+    <div id="contact" class="container anchor">
       <h2>Contact</h2>
       <a href="#"><p>mail@gmail.com</p></a>
+      <span class="tooltip">Contact me section only has an e-mail address thats also broken.</br></br> Should instead include links to other social networks like github/linkedIN</span>
     </div>
-  
+    <script>
+      const tooltip = document.querySelectorAll('.tooltip');
+      document.addEventListener('mousemove', fn, false);
 
-</body></html>
+      function fn(e) {
+        for (let i=tooltip.length; i--;) {
+          tooltip[i].style.left = e.pageX + 'px';
+          tooltip[i].style.top = e.pageY + 'px';
+        }
+      }
+    </script>
+  </body>
+</html>

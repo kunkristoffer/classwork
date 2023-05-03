@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 bud for utviklere</title>
+</head>
+<body>
+    <h1>10 bud for utviklere av Vegar Norman, seniorkonsulent CapGemini</h1>
+    <p>Hvordan blir man en god frontendutvikler? Jeg har tenkt at jeg burde skrive litt om dette en stund, men først i dag kom jeg i en skikkelig tankespiral om temaet da jeg satt og fylte ut en kompetansematrise på jobb.</p>
+    <p>Vi bruker mye energi på å definere hva en god frontendutvikler er, men veldig ofte handler det om rammeverk og verktøy og hvor lenge man har brukt nevnte rammeverk og verktøy. Om det er en god målenhet for hva en god frontendutvikler er, vet jeg ikke. Men jeg tror ikke det.</p>
+    <p>Det siste året har jeg jobbet med å finne min ikigai. Det er et japansk begrep som definerer ens hensikt her i livet, skjæringspunktet mellom fire ting: Det man elsker, det man er god på, det verden trenger fra en, og det man kan leve av.</p>
+    <p>Jo lenger jeg jobber som frontendutvikler, jo mer innser jeg at min ikigai er å jobbe med designsystemer og universell utforming - en grensesnittspesialist, for å kalle det det. Men vi kaller det frontendutvikling allikevel, for det er enkelt å forstå i en teknologihverdag.</p>
+    <p>Så hva gjør meg egentlig til en god frontendutvikler? Jeg har fundert på det, og landet på ti sentrale ting jeg synes definerer en god frontendutvikler. Ti bud, om du vil. Konseptet med bud og leveregler er enkelt å forstå, så derfor vil jeg snakke om mine personlige ti bud når det gjelder fagområdet mitt.</p>
+    <p>Merk at dette er mine ti bud. Dine ti bud, eller noen andre sine ti bud, kan være helt forskjellige. Det er lov å synes at mine bud er dumme og verdiløse, om du har andre bud som gir mening for deg selv.</p>
+    <p>Men min ikigai som frontendutvikler sentrerer seg rundt følgende enkle leveregler:</p>
+
+    <h2>Bud #1: La teknologien gjøre de tunge løftene for deg</h2>
+<p>Webteknologi har kommet langt de siste årene, og vi får flere og flere nyvinninger nå som browsere blir mer evergreen.</p>
+<p>HTML har fått et vell av semantiske tagger, av nyere tid et dedikert dialog-element til å lage modaler med. Vi har CSS grid, variabler, container queries og :has()-selektoren på stylingsiden. JavaScript modnes i et forbløffende tempo med ES-moduler og top-level async/await og andre features vi bare kunne drømme om tidligere.</p>
+<p>«Vi surrer med tullete spesialdesignede løsninger når vi ikke må. Og det må vi stoppe med.»</p>
+<p>Dessverre kaster vi altfor ofte disse verktøyene til side. Vi implementerer egne valideringsløsninger, enda HTML5 sin constraint validation fungerer utmerket i veldig mange tilfeller. Vi lager egne nedtrekksbokser, enda vi vet med sikkerhet at en native select fungerer mye bedre.</p>
+<p>Vi surrer med tullete spesialdesignede løsninger når vi ikke må. Og det må vi stoppe med. Bruk webstandarder og nettleserens styrker for alt det er verdt. Ikke jobb hardere - jobb smartere.</p>
+
+<h2>#2: Skriv alltid minst mulig kode for å komme i mål</h2>
+<p>Frontendutvikling har en del til felles med matlaging på høyt nivå. Slår du på et program med Gordon Ramsay, kan du innen fem minutter høre ordene "clean, simple flavors" uttalt med klar og tydelig røst. Ser du på en episode av Top Chef, kommer noen til å få smekk på lanken for å bruke for mange ingredienser, for mange smaker.</p>
+<p>Sånn er frontendutvikling også. Ikke gjør mer enn du må for å komme i mål.</p>
+<p>Skriv akkurat nok HTML til at det gir mening semantisk, og suppler med aria-attributter bare dersom du må. Skriv nok CSS til at det ser riktig ut, og ikke overstyr styling om ikke du trenger det. Aldri gjør en JavaScript-komponent mer komplisert enn du trenger. Hold deg til basics.</p>
+<p>Det er lettere å utvide om det er behov senere, enn det er å skalere ned når koden har blitt uhåndterlig.</p>
+
+<h2>#3: Kjenn dine nærmeste, og gjør deg kjent for dem</h2>
+<p>For at en frontendløsning skal være god, må landskapet rundt ligge til rette for det også.</p>
+<p>Designere må forstå hvordan en nettleser fungerer slik at de kan lage layouts og komponenter som lar seg implementere uten magi og hacks. Backendutviklere må forstå hvordan en frontend kommuniserer gjennom APIer og asynkrone handlinger slik at de kan lage tjenester som lar seg konsumere enkelt. Produkteiere og prosjektledere må forstå hva som tar tid og hva som er enkelt å gjennomføre slik at de kan få forutsigbarhet i sin hverdag.</p>
+<p>Men vi som frontendere må også forstå designerene, backendutviklerne og prosjektlederene. Det er en øvelse som går to veier, og som man kan og bør avsette dedikert tid til.</p>
+<p>Sitt med en designer og se hvordan de jobber, og la designeren se hvordan du jobber tilbake. Sett opp parprogrammerings-sesjoner med en backendutvikler for å åpne for forståelse. Ta en kaffe med produkteieren og senk skuldrene, se dem rett i øynene, og still alle de dumme spørsmålene du har. Forvent å få det samme tilbake.</p>
+
+<h2>#4: Ikke ekskluder andre, men inkluder dem på rett vis</h2>
+<p>Lag aldri tjenester som ikke er tilgjengelige for alle typer brukere. Men ikke forvent at alle typer brukere har godt av å benytte det samme grensesnittet på samme måte.</p>
+<p>Er en kartløsning eller en opptegnet graf det beste for en skjermleserbruker (altså en synshemmet), eller bør dataene heller tilgjengeliggjøres på en annen måte, for eksempel i en utlisting med en søkefunksjon? Er undertekster i en video alltid riktig løsning, eller vil det fungere bedre med et transkript som gjør at brukeren ikke trenger å spille av videoen i det hele tatt?</p>
+<p>Ikke tenk likhet i at alle skal bruke den samme løsningen, men heller likhet i at alle skal delta på likt grunnlag. Det kan bety at formatet noen ganger bør være annerledes.</p>
+
+<h2>#5: Tenk forvaltning, ikke bleeding edge</h2>
+<p>Webteknologi endrer seg i et slikt tempo at det er vanskelig å henge med. Rammeverk og verktøy kommer på løpende bånd, og reklamene skriker på fullt volum om at dette bare må du se på, ellers er du helt utafor!</p>
+<p>For bare noen små år siden var React nytt og hett. Nå er det praktisk talt en gammel traver, og nye rammeverk har kommet på løpende bånd siden det. Først var det Vue, så kom Elm, deretter Svelte, og i morgen er det sikkert noe annet.</p>
+<p>Dette er ikke sunt for frontendutvikling som et fagfelt. Det er sunt at teknologien utvikler seg, men det er ikke sunt for oss som lever av å skrive kode og må lære oss helt nye ting annethvert år for å holde tritt. Det er ikke sunt for selskapene som bruker løsningene og sitter med teknisk gjeld til pipa fordi vi lager ting på forskjellig måte hver gang vi lager ting.</p>
+<p>Dette er etter min mening det største "samfunnsproblemet" innen utvikling per i dag. Gammel som jeg kanskje høres ut når jeg sier det: vi må tenke forvaltning først, og utforskning etterpå. Spesielt innenfor det som er forretningskritisk. Ikke gi etter for reklamene om de skinnende nye verktøyene når de gamle fortsatt fungerer godt.</p>
+
+<h2>#6: See one, do one, teach one</h2>
+<p>Sitatet kommer fra Akutten og handler egentlig om medisinske prosedyrer, men det er en like god tilnærming til kode og teknologi.</p>
+<p>Skal man lære noe nytt, enten det er et kodeproblem, en komponent man skal lage, en pipeline som skal settes opp, eller hva som helst annet: Se først på noen som kan gjøre det, gjør det deretter selv, og lær det bort til noen andre. Gjenta etter behov.</p>
+<p>Det er en pedagogisk måte å lære på selv, og sikrer også at andre får nyte av det du har lært.</p>
+
+<h2>#7: Se hva som skjer</h2>
+<p>Du vet ikke hvordan en løsning fungerer før du har sett noen bruke den for første gang. Det er derfor vi som frontendutviklere må involvere oss i brukertesting og se hvordan sluttbrukere jobber med det vi lager.</p>
+<p>Mange synes dette egentlig er jobben til en tester, en designer, en UX-er. Og det er kanskje sant, på en måte, men det er ingen grunn til at ikke vi som jobber med koden skal se hvordan den tas i bruk i virkeligheten. Det er et godt verktøy for å oppdage bugs, og et enda bedre verktøy for å få mer kontakt med produktet, og ikke bare koden som driver produktet.</p>
+<p>Ikke ta deg nær av det brukerene sier, eller av at det kanskje ikke funker. Det er ikke brukeren som har feil. Det er bare du som må skru om koden litt.</p>
+
+<h2>#8: Hør hva som skjer</h2>
+<p>De fleste brukere, og også utviklere, har et normalt fungerende syn. Derfor er det så vanskelig å forstå hvordan IT-verdenen fortoner seg for noen som ikke har det. Det er et problem, for det vi lager skal også fungere for de som ikke ser internettet - men hører det.</p>
+<p>Derfor må vi bruke skjermlesere mer.</p>
+<p>For mange er skjermlesere en stor, ildsprutende drage. Vi har hørt myter og sagn om hvor store og skumle og farlige de er, og hvor vanskelige og umulige de er å temme.</p>
+<p>Derfor skyr vi unna dem og dytter problemene over på andre og sier noe sånt som at "dette burde nok testes med en skjermleser men det kan ikke jeg gjøre noe med" før vi assigner saken til en stakkars UX-er i Jira.</p>
+<p>Men skjermlesere er lavterskel. Alle får tak i en skjermleser. macOS kommer med en innebygget, og vi har dem på telefonene våre i form av VoiceOver på iOS eller Talkback på Android. Vi kan laste ned NVDA til Windows helt gratis. Det er bare programvare, og det finnes kursmateriale på nettet. Av alle hjelpemidler er dette det enkleste å få tak i; prøv bare å forestille deg hvordan det ville være å få tak i en leselist i stedet for.</p>
+<p>Slutt å syte. Sett opp en skjermleser og begynn å leke deg rundt, så er du i gang.</p>
+
+<h2>#9: Ikke overkompliser utviklingsmiljøet ditt</h2>
+<p>Sist jeg så på en annen utvikler sin VS Code-installasjon, begynte jeg å kaldsvette. Vi har verktøy for absolutt alt, fra formattering av kode og linting, til sjekking av commit messages, kjøring av tester, utlisting av commit-historikk i Git... VS Code er en fantastisk editor på grunn av alt du kan gjøre med den for å sette opp et utviklingsmiljø som passer deg.</p>
+<p>Min VS Code har et custom fargetema. That's it. Om det er krav til kodestil og formattering, installerer jeg Prettier om jeg må. Jeg installerer også ESLint om jeg må. Men bare om jeg må.</p>
+<p>Hvorfor? Fordi det kludrer til for meg når jeg vil skrive kode på en effektiv måte, og extensions jeg har installert plutselig blander seg inn. Det skaper støy, jeg mister tråden, og jeg bruker mer tid på å ergre meg over det verktøyet som skal hjelpe meg kontra å skrive velfungerende kode.</p>
+<p>Jeg har skjønt fra diskusjoner med andre utviklere at jeg er sær på grunn av dette. Det er greit. Så er jeg sær. Sær fungerer fint for meg, og koden jeg skriver er god uansett. Og det er dét som er det viktigste: at man har et miljø som fungerer. Bare ikke overkompliser fordi du tror du må. Det er lov å kutte ned på distraksjoner.</p>
+
+<h2>#10: Vær tålmodig</h2>
+<p>Dette, av alle bud, er det jeg minner meg selv på oftest.</p>
+<p>Vi lever i en verden der teknologien går veldig fort fremover, og ofte er det en stor oppgave å sette seg inn i noe nytt. Andre skjønner seg kanskje på Remix og Astro bedre enn meg, og har skjønt at Vite er det nye hotte hva gjelder utviklingsmiljø. Jeg har ikke landet der ennå, men jeg jobber med saken. Jeg må bare være tålmodig.</p>
+<p>Jeg kan ikke rase avgårde i prosjektet jeg sitter på fordi designdelen ikke er klar. Joda, jeg vet kanskje innerst inne hvordan det kommer til å fungere og se ut, men jeg setter meg ikke ned og begynner å kode før noe er klart allikevel. Da må jeg bare gjøre arbeid på nytt, av all høy sannsynlighet. Vær tålmodig.</p>
+<p>Jeg har tjue tusen ting jeg må gjøre på jobb hver dag. Skrive logg, skrive timer, skrive velutformede commit messages, skrive kode som ikke brekker i vinkel om noen sitter med Internet Explorer. Tyngden av de tjue tusen tingene er voldsom, noen dager mer enn andre.</p>
+<p>Jeg kan ikke gjøre alt på en gang, og jeg må prioritere ut fra min egen tid og energi. Det er sånn det funker. Men jeg kommer over alt sammen til slutt. Bare jeg er tålmodig.</p>
+<p>Tålmodighet er et konsept med mange fasetter. Det har seg bare sånn at tålmodighet som regel er det rette svaret uansett problem. Tålmodighet med prosessene, med andre, og aller mest seg selv.</p>
+
+<h2>Til slutt // hva er Ikigai igjen?</h2>
+<p>Det å være en god frontendutvikler handler ikke bare om teknologi. Ofte handler det slett ikke om teknologi i det hele tatt.</p>
+<p>Men disse ti budene er det som driver min ikigai og det som holder meg i senter. Det er mange andre ting også, naturligvis, men disse er de viktigste og mest generelle. Noe er fag, noe er ikke fag. Sånn er det alltid.</p>
+<p>Vi avslutter med å repetere hva Ikigai faktisk betyr</p>
+<p>Hva er det som får deg til å stå opp om morgenen? Et så stort spørsmål er kanskje det som driver deg tilbake i sengen og med hodet under dynen, igjen. Japanerne har heldigvis et svar på dette, de kaller det ikigai.</p>
+<p>Ordet er sammensatt av de to japanske ordene ikiru og kai, og kan oversettes til norsk som «meningen med livet». Har du ennå ikke grublet deg frem til hva dette er for deg, anbefaler ekspertene at du starter med fire spørsmål:</p>
+<ul>
+    <li><p>Hva liker du å gjøre?</p></li>
+    <li><p>Hva er du god til?</p></li>
+    <li><p>Hva trenger verden at du gjør?</p></li>
+    <li><p>Hva kan du få betalt for å gjøre?</p></li>
+</ul>
+<p>…med det er et foredrag til en annen gang!</p>
+</body>
+</html>

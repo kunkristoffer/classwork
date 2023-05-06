@@ -22,6 +22,7 @@ main {
     padding: 20px;
     border-radius: 5px;
     display: flex;
+    max-height: 80vh;
 }
 
 fieldset {
@@ -30,3 +31,46 @@ fieldset {
     display: flex;
     flex-flow: wrap column;
 }
+
+.char-select {
+    display: flex;
+
+}
+
+.char-details {
+    display: flex;
+    flex-flow: wrap column;
+}
+
+.green {
+    background-color: green;
+}
+.green:hover {
+    background-color: rgb(3, 148, 3) !important;
+}
+
+[type=radio] { 
+    display: none;
+  }
+[type=radio] + img {
+    filter: brightness(10%);
+}
+[type=radio]:checked + img {
+    filter: brightness(100%);
+}
+
+.cwdt-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 50px;
+}
+
+.cwdt-table div {
+    padding: 5px;
+    border: 2px solid #2e2e2e;
+    text-align: center;
+   }
+
+.cwdt-table div:hover {
+    background-color: #ffffff10;
+   }

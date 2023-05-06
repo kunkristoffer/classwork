@@ -8,54 +8,63 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
-<body>
+<body onload="updateValue()">
     <main>
         <div id="inputs">
             <fieldset>
                 <legend>Configuration</legend>
-                <label for="inputLife">
-                    Life
-                    <input type="number" name="" id="inputLife" value="2000" required>
-                </label>
-                <label for="inputEnergy">
-                    Energy shield
-                    <input type="number" name="" id="inputEnergy" value="160" required>
-                </label>
-                <label for="inputWard">
-                    Ward
-                    <input type="number" name="" id="inputWard" value="1000" required>
-                </label>
-                <label for="inputChaos">
-                    Chaos resistance
-                    <input type="number" name="" id="inputChaos" value="-60" required>
-                </label>
-                <label for="divergentCheckbox">
-                    <input type="checkbox" name="" id="divergentCheckbox">
-                    Divergent CWDT
-                </label>
-                <label for="divergentQuality" style="display: none;">
-                    Divergent qual%
-                    <input type="number" name="" id="divergentQuality" value="20" required>
-                </label>
-                <label for="inputHeartbound">
-                    <input type="checkbox" name="" id="inputHeartbound">
-                    2x Heartbound
-                </label>
-                <label for="inputSkeleton">
-                    <input type="checkbox" name="" id="inputSkeleton">
-                    lvl 21 skeletons
-                </label>
-                <label for="inputForbiddenrite">
-                    <input type="checkbox" name="" id="inputForbiddenrite" checked>
-                    Forbidden rite
-                </label>
-                <input type="submit" value="Calculate" onclick="updateValue()">
-                <div id="output" style="text-align: center; color: orange; font-size: 1.5em; margin-top: 20px;">
-                    tbd
+                <div class="char-select">
+                    <label for="ascendant">
+                        <input type="radio" name="char-select" id="ascendant">
+                        <img src="media/ascendant.png" alt="picture of a poe ascendant character">
+                    </label>
+                    <label for="saboteur">
+                        <input type="radio" name="char-select" id="saboteur" checked>
+                        <img src="media/saboteur.png" alt="picture of a poe ascendant character">
+                    </label>
                 </div>
+                <div class="char-details">
+                    <label for="inputLife">Life</label>
+                    <input type="number" name="" id="inputLife" value="2000" required>
+                    <label for="inputEnergy">Energy shield</label>
+                    <input type="number" name="" id="inputEnergy" value="160" required>
+                    <label for="inputWard">Ward</label>
+                    <input type="number" name="" id="inputWard" value="1000" required>
+                    <label for="inputChaos">Chaos resistance</label>
+                    <input type="number" name="" id="inputChaos" value="-60" required>
+                    <label for="inputDivergent">Divergent CWDT %</label>
+                    <input type="number" name="" id="inputDivergent" value="23" required>
+                    <label for="divergentQuality" style="display: none;">
+                        Divergent qual%
+                        <input type="number" name="" id="divergentQuality" value="20" required>
+                    </label>
+                    <br>
+                    <label for="inputHeartbound">
+                        <input type="checkbox" name="" id="inputHeartbound">
+                        2x Heartbound
+                    </label>
+                    <label for="inputSkeleton">
+                        <input type="checkbox" name="" id="inputSkeleton">
+                        lvl 21 skeletons
+                    </label>
+                    <label for="inputForbiddenrite">
+                        <input type="checkbox" name="" id="inputForbiddenrite" checked>
+                        Forbidden rite
+                    </label>
+                    <!-- <input type="submit" value="Calculate" onclick="updateValue()"> -->
+                </div>
+                <div id="debug" style="text-align: center; color: orange; font-size: 1.5em; margin-top: 20px;"></div>
             </fieldset>
         </div>
-        <div id="cwdt"></div>
+        <div>
+            <div class="cwdt-table">
+                <div>Level</div>
+                <div>Normal</div>
+                <div>Divergent</div>
+                <div>Custom %</div>
+            </div>
+            <div id="cwdt-table" class="cwdt-table"></div>
+        </div>
     </main>
 </body>
 </html>

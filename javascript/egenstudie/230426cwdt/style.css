@@ -34,7 +34,6 @@ fieldset {
 
 .char-select {
     display: flex;
-
 }
 
 .char-details {
@@ -74,3 +73,23 @@ fieldset {
 .cwdt-table div:hover {
     background-color: #ffffff10;
    }
+
+@media screen and (max-width: 700px) {
+    body {
+        margin-top: 10px;
+        align-content: start;
+    }
+    main {
+        flex-flow: column;        
+    }
+    .char-select {
+        justify-content: center;
+    }
+    fieldset {
+        max-width: 100%;
+    }
+    .cwdt-table {
+        width: 100%;
+        margin: 10px 0;
+    }
+  }

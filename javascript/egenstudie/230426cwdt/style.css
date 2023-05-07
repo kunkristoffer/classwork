@@ -44,6 +44,9 @@ fieldset {
 .green {
     background-color: green;
 }
+.red {
+    background-color: red;
+}
 .green:hover {
     background-color: rgb(3, 148, 3) !important;
 }

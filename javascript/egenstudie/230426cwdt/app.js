@@ -27,9 +27,18 @@ function updateValue() {
   const forbiddenriteDamage = inputForbiddenrite ? ((inputLife * 0.4) + (inputEnergy * 0.25)) * (1-(inputChaos/100)) : 0;
   const totalDamage = inputCharacter ? (skeletonDamage + forbiddenriteDamage) * 2 : (skeletonDamage + forbiddenriteDamage);
 
-    // printing cwdt table to html, but first clear the area
+  // printing cwdt table to html, but first clear the area
   while(output.firstChild)
   output.removeChild(output.firstChild);
+
+  // Warns if you're taking chaos damage
+  if (forbiddenriteDamage - inputWard > 0) {
+    debug.textContent = `${Math.round(forbiddenriteDamage - inputWard)} damage taken`;
+  } else {
+    // had to include else statement to clear debug if no damage will be taken
+    debug.textContent = ``;
+  }
+    
 
   // Lets generate that table with some nice colors
   for (let i = 0; i < cwdt.length; i++) {
@@ -57,27 +66,19 @@ function updateValue() {
 
     // color green if bellow threshold 
     if (innMin*0.9 < totalDamage && innMin*1.5 > totalDamage) {
-      if (innValue < totalDamage) {
+      fragment.appendChild(outLevel);
+      fragment.appendChild(outValue);
+      fragment.appendChild(outDivergent);
+      fragment.appendChild(outCustom);
+      
+      if ((innValue||innDivergent||innCustom) < totalDamage) 
         fragment.appendChild(outLevel).setAttribute("class", "green");
+      if (innValue < totalDamage) 
         fragment.appendChild(outValue).setAttribute("class", "green");
+      if (innDivergent < totalDamage) 
         fragment.appendChild(outDivergent).setAttribute("class", "green");
+      if (innCustom < totalDamage) 
         fragment.appendChild(outCustom).setAttribute("class", "green");
-      } else if (innDivergent < totalDamage) {
-        fragment.appendChild(outLevel).setAttribute("class", "green");
-        fragment.appendChild(outValue);
-        fragment.appendChild(outDivergent).setAttribute("class", "green");
-        fragment.appendChild(outCustom).setAttribute("class", "green");
-      } else if (innCustom < totalDamage) {
-        fragment.appendChild(outLevel).setAttribute("class", "green");
-        fragment.appendChild(outValue);
-        fragment.appendChild(outDivergent);
-        fragment.appendChild(outCustom).setAttribute("class", "green");
-      } else {
-        fragment.appendChild(outLevel);
-        fragment.appendChild(outValue);
-        fragment.appendChild(outDivergent);
-        fragment.appendChild(outCustom);
-      }
     }
 
     // prints result in html

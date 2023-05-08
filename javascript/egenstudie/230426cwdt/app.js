@@ -24,8 +24,7 @@ function updateValue() {
   const inputDivergent = document.getElementById("inputDivergent").value;
   const inputHeartbound = document.getElementById("inputHeartbound").checked;
   const inputSkeleton = document.getElementById("inputSkeleton").checked;
-  const inputForbiddenrite =
-    document.getElementById("inputForbiddenrite").checked;
+  const inputForbiddenrite =document.getElementById("inputForbiddenrite").checked;
 
   // calculations
   const heartboundDamage = inputHeartbound ? 840 : 420;

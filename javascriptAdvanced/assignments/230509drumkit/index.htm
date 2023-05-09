@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script src="app.js" defer></script>
+    <title>Drumkit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #131316;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            font-size: 16px;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #player {
+            text-align: center;
+        }
+        #player img {
+            transition: 0.1s ease-in-out;
+        }
+
+        #player img:hover {
+            scale: 1.1;
+        }
+
+        .disclaimer {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .disclaimer a {
+            text-decoration: none;
+            color: #ff7300;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="player">
+            <h1>Please choose your fighter</h1>
+            <img src="media/img/player1.png" alt="">
+            <img src="media/img/player2.png" alt="">
+            <img src="media/img/player3.png" alt="">
+        </div>
+        <div id="drumkit">
+
+        </div>
+    </main>
+    <p class="disclaimer">drumsamples from <a href="https://www.goldbaby.co.nz/freestuff.html">goldbaby</a></p>
+</body>
+</html>

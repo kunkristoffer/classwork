@@ -51,6 +51,9 @@ body {
     transform: translate(-50%);
     z-index: 1;
 }
+.kick:hover {
+    scale: 1.01;
+}
 
 .hihat {
     bottom: 50px;
@@ -87,4 +90,14 @@ body {
 .clap {
     top: 0;
     left: 0;
+}
+
+@media (max-width: 500px) or (any-pointer: coarse) {
+    #drumkit {
+     -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+     -o-transform: rotate(90deg);
+     -ms-transform: rotate(90deg);
+     transform: rotate(90deg);
+    }
 }

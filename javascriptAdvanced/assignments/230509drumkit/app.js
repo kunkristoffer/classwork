@@ -40,7 +40,7 @@ class drumElement {
             sound.play()
         })
 
-        window.addEventListener("keydown", (event) => {
+        document.addEventListener("keydown", (event) => {
             if (this.key === event.key) {
                 sound.currentTime = 0
                 sound.pause()
@@ -53,6 +53,9 @@ class drumElement {
 }
 
 for (let i = 0; i < soundList.length; i++) {
-    let test = new drumElement(i)
-    outputArea.append(test.addDrumElement(i))
+    let drum = new drumElement(i)
+    outputArea.append(drum.addDrumElement(i))
 }
+
+// toDo
+// scale: 1.1 on event

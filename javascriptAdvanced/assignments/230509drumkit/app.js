@@ -1,39 +1,60 @@
 // linking
 const outputArea = document.getElementById("output")
 const br = document.createElement("br")
-const button = document.createElement("button")
-const checkbox = document.createElement('input')
-      checkbox.type = 'checkbox'
-const text = document.createElement("p")
 
 // pathing
-const soundPath = "media/sounds/"
-const imagePath = "media/img/"
+const soundPath = "media/sound/"
+const imagePath = "media/image/"
 
 // valid keypresses
-const validKeys = ["Space", "q", "w", "e", "i", "o", "p"]
+const validKeys = [" ", "q", "w", "e", "r", "i", "o", "p"]
 
 // available sound files
 const soundList = [
-    "clap.wav",
-    "hihat.wav",
-    "kick.wav",
-    "openhat.wav",
-    "ride.wav",
-    "snare.wav",
-    "tink.wav",
-    "tom.wav"
+    "clap",
+    "hihat",
+    "kick",
+    "openhat",
+    "ride",
+    "snare",
+    "tink",
+    "tom"
 ]
 
-// let playSound = () => new Audio("media/test/clap.wav").play()
 class drumElement {
-    constructor (name, variant) {
-        this.name = name,
-        this.img = `media/img/${name}${variant ? variant : ""}.png`
-        this.sound = `media/test/${name}${variant ? variant : ""}.wav`
-        // add keypress her?
+    constructor (i) {
+        this.name = soundList[i],
+        this.img = `${imagePath}${soundList[i]}.png`
+        this.sound = `${soundPath}${soundList[i]}.wav`
+        this.key = validKeys[i]
     }
-    
+    addDrumElement() {
+        const img = document.createElement("img")
+        img.src = this.img
+        const sound = new Audio(`${this.sound}`)
+
+        img.addEventListener("click", () => {
+            sound.currentTime = 0
+            sound.pause()
+            sound.play()
+        })
+
+        window.addEventListener("keydown", (event) => {
+            if (this.key === event.key) {
+                sound.currentTime = 0
+                sound.pause()
+                sound.play()
+            }
+        })
+
+        return img
+    }
+}
+
+
+for (let i = 0; i < soundList.length; i++) {
+    let test = new drumElement(i)
+    outputArea.append(test.addDrumElement(i))
 }
 
 
@@ -42,22 +63,16 @@ class drumElement {
 
 
 
-function addDrum(type) {
-    
-}
-
-console.log(sound1)
 
 
-/* 
-my drum kit
-
-stage 1:
-create object that has file name, img, sound and keypress
-create new using object and append to output
-
-Stage Bonus:
-add backing rhythm
 
 
-*/
+
+
+
+
+
+
+
+
+

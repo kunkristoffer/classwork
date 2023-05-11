@@ -44,6 +44,10 @@ body {
     position: absolute;
 }
 
+#drumkit img:hover {
+    scale: 1.05;
+}
+
 .kick {
     max-width: 150px !important;
     bottom: 0;

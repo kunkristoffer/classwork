@@ -15,16 +15,6 @@ body {
     justify-content: center;
     height: 100vh;
 }
-#player {
-    text-align: center;
-}
-#player img {
-    transition: 0.1s ease-in-out;
-}
-
-#player img:hover {
-    scale: 1.1;
-}
 
 .disclaimer {
     position: absolute;
@@ -41,4 +31,60 @@ body {
 #drumkit img {
     max-width: 100px;
     aspect-ratio: 1;
+}
+
+#drumkit{
+    width: 500px;
+    height: 200px;
+    margin-inline: auto;
+    position: relative;
+}
+
+#drumkit img {
+    position: absolute;
+}
+
+.kick {
+    max-width: 150px !important;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.hihat {
+    bottom: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.openhat {
+    bottom: 100px;
+    left: 100px;
+    z-index: 1;
+}
+
+.ride {
+    bottom: 100px;
+    right: 100px;
+}
+
+.tom {
+    bottom: 0;
+    right: 100px;
+}
+
+.snare {
+    bottom: 0;
+    left: 100px;
+}
+
+.tink {
+    top: 0;
+    right: 0;
+}
+
+.clap {
+    top: 0;
+    left: 0;
 }

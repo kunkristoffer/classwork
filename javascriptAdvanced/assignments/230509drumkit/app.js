@@ -7,18 +7,18 @@ const soundPath = "media/sound/"
 const imagePath = "media/image/"
 
 // valid keypresses
-const validKeys = [" ", "q", "w", "e", "r", "i", "o", "p"]
+const validKeys = [" ", "q", "w", "e", "r", "a", "s", "d"]
 
 // available sound files
 const soundList = [
-    "clap",
-    "hihat",
     "kick",
+    "hihat",
     "openhat",
     "ride",
+    "tom",
     "snare",
     "tink",
-    "tom"
+    "clap"
 ]
 
 class drumElement {
@@ -29,9 +29,10 @@ class drumElement {
         this.key = validKeys[i]
     }
     addDrumElement() {
+        const sound = new Audio(`${this.sound}`)
         const img = document.createElement("img")
         img.src = this.img
-        const sound = new Audio(`${this.sound}`)
+        img.classList.add(this.name);
 
         img.addEventListener("click", () => {
             sound.currentTime = 0
@@ -51,28 +52,7 @@ class drumElement {
     }
 }
 
-
 for (let i = 0; i < soundList.length; i++) {
     let test = new drumElement(i)
     outputArea.append(test.addDrumElement(i))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

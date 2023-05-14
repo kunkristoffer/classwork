@@ -41,9 +41,7 @@ class drumElement {
         div.classList.add("drum",this.name);
 
         div.addEventListener("click", () => {
-            sound.currentTime = 0
-            sound.pause()
-            sound.play()
+            sound.cloneNode().play()
         })
 
         return div
@@ -57,9 +55,7 @@ document.addEventListener("keydown", (event) => {
     if (soundNumber < 0) return
 
     const sound = new Audio(`${soundPath}${soundList[soundNumber]}.wav`)
-    sound.currentTime = 0
-    sound.pause()
-    sound.play() 
+    sound.cloneNode().play() 
 })
 
 // loops over soundlist to get every type of drum and append to #drumkit

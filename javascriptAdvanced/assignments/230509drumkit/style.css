@@ -28,31 +28,45 @@ body {
     color: #ff7300;
 }
 
-#drumkit img {
-    max-width: 100px;
-    aspect-ratio: 1;
-}
-
-#drumkit{
-    width: 500px;
-    height: 200px;
-    margin-inline: auto;
+#output {
     position: relative;
+    max-height: 75vh;
+    width: 75vw;
+    aspect-ratio: 2;
 }
 
-#drumkit img {
+.drum {
+    max-width: 20%;
     position: absolute;
+    transform: translate(-50%);
 }
 
-#drumkit img:hover {
+.drum span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.drum p {
+    color: #e5e2db;
+    font-size: 7vw;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px #000000, 0px 0px 20px #000000;
+}
+
+.drum img {
+    width: 100%;
+}
+.drum img:hover {
     scale: 1.05;
 }
 
+/* custom positioning for drumkit elements */
 .kick {
-    max-width: 150px !important;
+    max-width: 25% !important;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%);
     z-index: 1;
 }
 .kick:hover {
@@ -60,42 +74,44 @@ body {
 }
 
 .hihat {
-    bottom: 50px;
-    left: 50px;
+    top: 33%;
+    left: 33%;
     z-index: 1;
 }
 
 .openhat {
-    bottom: 100px;
-    left: 100px;
+    top: 15%;
+    left: 50%;
     z-index: 1;
 }
 
 .ride {
-    bottom: 100px;
-    right: 100px;
+    top: 33%;
+    right: 15%;
+    z-index: 1;
 }
 
 .tom {
     bottom: 0;
-    right: 100px;
+    right: 5%;
 }
 
 .snare {
     bottom: 0;
-    left: 100px;
+    left: 25%;
 }
 
 .tink {
     top: 0;
-    right: 0;
+    right: -10%;
 }
 
 .clap {
     top: 0;
-    left: 0;
+    left: 10%;
 }
 
+/* Rotates drumkit on small screens */
 @media (max-width: 500px) or (any-pointer: coarse) {
     #drumkit {
      -webkit-transform: rotate(90deg);
@@ -103,5 +119,8 @@ body {
      -o-transform: rotate(90deg);
      -ms-transform: rotate(90deg);
      transform: rotate(90deg);
+    }
+    #output {
+        width: 75vh;
     }
 }

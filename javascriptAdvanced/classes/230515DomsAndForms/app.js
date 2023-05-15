@@ -20,6 +20,8 @@ buttonSubmit.addEventListener("click", handleButton) */
     outPut.appendChild(outputLI)
 } */
 
+outPut.append(createOl)
+
 function addTodo(event) {
     // når du bruker submit event sammen med form så må man bruke 
     // event.preventDefault() fra å reloade siden
@@ -47,7 +49,7 @@ function addTodo(event) {
 
     // adds elements to the Dom
     createLi.append(createCheckbox,createP,createBtn)
-    outPut.append(createLi)
+    createOl.append(createLi)
 
     // Clears inputfield after submit
     formText.value = ""

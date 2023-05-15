@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Dom manipulation and forms</title>
+    <script src="app.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #131316;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        font-size: 16px;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      #output {
+        background-color: #ffffff0c;
+        padding: 20px 50px;
+        border-radius: 5px;
+      }
+      .flex {
+        display: flex;
+      }
+      #output li {
+        display: flex;
+        align-items: center;
+      }
+      li input[type=checkbox] {
+        margin-right: 10px;
+      }
+      li button {
+        opacity: 0;
+        margin-left: 10px;
+        border: none;
+        background-color: red;
+        color: white;
+        text-align: center;
+        height: 2ch;
+        aspect-ratio: 1;
+        text-decoration: none;
+        border-radius: 50%;
+        transition: opacity 0.2s ease-in-out;
+      }
+      li:hover button {
+       opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+<!--     <p id="paragraph">input from paragraph</p>
+    <div class="flex">
+      <input id="#text-input" type="text">
+      <button id="btn-submit">submit</button>
+    </div>
+    <div class="flex">
+      <input id="#checkbox-input" type="checkbox">
+      <input id="#radio-input" type="radio">
+    </div> -->
+    <form id="input-form" action="">
+      <p id="paragraph">To-do list</p>
+      <input type="text" name="" id="input-text">
+      <button id="input-submit">submit</button>
+    </form>
+    <br>
+    <div id="output"></div>
+  </body>
+</html>

@@ -4,6 +4,7 @@ const formE1 = document.getElementById("input-form")
 const formText = document.getElementById("input-text")
 const createDiv = document.createElement("div")
 const createOl = document.createElement("ol")
+const uniqueID = Date.now()
 
 /* function handleButton() {
     const paraE1 = document.querySelector("p")
@@ -56,3 +57,4 @@ function addTodo(event) {
 }
 
 formE1.addEventListener("submit", addTodo)
+

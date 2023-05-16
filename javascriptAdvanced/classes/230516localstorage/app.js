@@ -9,15 +9,15 @@ const createOl = document.createElement("ol")
 outPut.append(createOl)
 
 // Defines the name of the localstorage key
-const localStorageKey = "todolistproject"
+const localStorageKey = "todoItem"
 let todoStorage = JSON.parse(localStorage.getItem(localStorageKey)) || []
 
 // loop through todolist array, and with each object create html elements for the todo item.
-todoStorage.forEach((item) => createTodoHtml(item.name, item.id))
+todoStorage.forEach((item) => createTodoHtml(item.name, item.state, item.id))
 
 
 // template for how todo list items will be added as html
-function createTodoHtml(text, id) {
+function createTodoHtml(text, stateCheck, uniqueID) {
     // creates needed elements for creating todo list
     const createLi = document.createElement("li")
     const createP = document.createElement("p")
@@ -27,10 +27,16 @@ function createTodoHtml(text, id) {
     // fills created elements with content
     createBtn.textContent = "-"
     createP.textContent = text
+
+    // checks state of checkbox
     createCheckbox.setAttribute("type", "checkbox");
+    createCheckbox.checked = stateCheck
+    
+    // checks if checkbox is clicked
+    createCheckbox.addEventListener("click", () => updateTodo(uniqueID))
 
     // removes todo entry on click
-    createBtn.addEventListener("click", () => removeTodo(createLi, id))
+    createBtn.addEventListener("click", () => removeTodo(createLi, uniqueID))
 
     // adds elements to the Dom
     createLi.append(createCheckbox,createP,createBtn)
@@ -42,17 +48,19 @@ function createTodoHtml(text, id) {
 function addTodo(text) {
     // Generates a unique number for use as ID
     let uniqueID = Date.now()
+    let stateCheck = false
 
     // Fetch values from input and inserts into array
     todoStorage.push({
         name: text,
+        state: stateCheck,
         id: uniqueID
     })
     // updates localstorage with new array
     localStorage.setItem(localStorageKey, JSON.stringify(todoStorage))
        
     // calls on createTodoHtml
-    createTodoHtml(text, uniqueID)
+    createTodoHtml(text, stateCheck, uniqueID)
 }
 
 
@@ -67,6 +75,20 @@ function removeTodo(element, id) {
   
     // removes element
     element.remove()
+}
+
+// Updates an element if checkbox is clicked
+function updateTodo(uniqueID) {
+    let todoStorageIndex = todoStorage.findIndex(item => item.id === uniqueID);
+
+    if (todoStorage[todoStorageIndex].state) {
+        todoStorage[todoStorageIndex].state = false
+    } else {
+        todoStorage[todoStorageIndex].state = true
+    }
+    // updates localstorage with new array
+    localStorage.setItem(localStorageKey, JSON.stringify(todoStorage))
+    console.log(todoStorage[todoStorageIndex].state)
 }
 
 

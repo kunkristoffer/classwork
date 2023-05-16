@@ -6,21 +6,6 @@ const createDiv = document.createElement("div")
 const createOl = document.createElement("ol")
 const uniqueID = Date.now()
 
-/* function handleButton() {
-    const paraE1 = document.querySelector("p")
-    const inputE1 = document.getElementById("#text-input")
-    const checkE1 = document.getElementById("#checkbox-input")
-    outPut.textContent = inputE1.value
-}
-buttonSubmit.addEventListener("click", handleButton) */
-
-/* function handleForm(event) {
-    const outputLI = document.createElement("li")
-    const inputValues = formText.textContent
-    outputLI.textContent = inputValues
-    outPut.appendChild(outputLI)
-} */
-
 outPut.append(createOl)
 
 function addTodo(event) {

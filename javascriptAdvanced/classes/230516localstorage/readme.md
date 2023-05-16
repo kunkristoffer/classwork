@@ -1,1 +1,1 @@
-link: https://kristofferfh.github.io/classwork/javascriptAdvanced/classes/230515DomsAndForms/
+link: https://kristofferfh.github.io/classwork/javascriptAdvanced/classes/230516localstorage/

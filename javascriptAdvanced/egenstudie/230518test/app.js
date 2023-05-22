@@ -2,6 +2,12 @@
 const inputField = document.getElementById("inputJS")
 const outputField = document.getElementById("outputJS")
 
+// Adds eventlistener on form submit
+inputField.addEventListener("submit", updateInputFields)
+
+// Runs on startup, generates inputfields
+generateInputFields();
+
 // Create elements
 const cDiv = document.createElement("div")
 const cFld = document.createElement("fieldset")
@@ -101,12 +107,16 @@ function updateInputFields(event) {
     // stops reloading
     event.preventDefault()
 
+    // looks for inputfields
     const characterInputs = document.querySelectorAll("input")
-    const inputLife = document.getElementById("inputLife")
 
+    // temporary text to inform on submitted form
     cPar.textContent = "submitted, awaiting reload"
     inputField.append(cPar)
 
+    // https://hackernoon.com/how-to-update-object-key-values-using-javascript
+
+    // loops over ???
     for(let item of Object.keys(characterInputs)) {
         console.log(item)
     }
@@ -124,10 +134,6 @@ function updateInputFields(event) {
     // localStorage.setItem(localStorageKey, JSON.stringify(characterStats))
 }
 
-inputField.addEventListener("submit", updateInputFields)
-
-// Runs on startup, generates inputfields
-generateInputFields();
 
 
 // event #
@@ -139,9 +145,20 @@ generateInputFields();
 // 6: 
 // 7: 
 // 8: 
-// 9: https://images-ext-1.discordapp.net/external/UeEMFX72pFrG9YB9XtQ0gELG3Zvs1ycDC5A1qwlLGVo/https/i.imgur.com/ekT58Cv.png
+// 9: https/i.imgur.com/ekT58Cv.png
 
 
+
+// Resources
+// https://developer.mozilla.org/en-US/docs/Web/API/FormData
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+
+
+
+// 2do
+// https://css-tricks.com/a-bunch-of-options-for-looping-over-queryselectorall-nodelists/
+// https://hackernoon.com/how-to-update-object-key-values-using-javascript
+// https://stackoverflow.com/questions/45626786/convert-input-fields-to-json-in-javascript
 
 
 
@@ -159,6 +176,3 @@ generateInputFields();
     localStorage.setItem("test", JSON.stringify(formJSON))
     console.log(data)
   } */
-
-// Resources
-// https://developer.mozilla.org/en-US/docs/Web/API/FormData

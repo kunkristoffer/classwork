@@ -1,0 +1,1 @@
+Link: https://kristofferfh.github.io/classwork/javascriptAdvanced/egenstudie/230518test/

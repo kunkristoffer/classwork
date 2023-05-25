@@ -8,6 +8,9 @@ const createDiv = document.createElement("div")
 const createOl = document.createElement("ol")
 outPut.append(createOl)
 
+// Adds event listener to submit button on the form
+formE1.addEventListener("submit", handleSubmit)
+
 // Defines the name of the localstorage key
 const localStorageKey = "todoItem"
 let todoStorage = JSON.parse(localStorage.getItem(localStorageKey)) || []
@@ -120,5 +123,63 @@ function clearTodo() {
 }
 
 
-// Adds event listener to submit button on the form
-formE1.addEventListener("submit", handleSubmit)
+// sorts the todo array
+function sortTodo(list, sortBy, sortOrder) {
+    const sortedList = [...list]
+    const sortOrder = order === "asc" ? 1 : -1
+    sortedList.sort((a,b) => {
+        if (a[sortBy] > b[sortBy]) return 1 * sortOrder
+        else if (a[sortBy] < b[sortBy]) return -1 * sortOrder
+        return 0
+    })
+    return sortedList;
+}
+
+// todolist.sort((1,b) => b.id - a.id) funker også, men bare på tall
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// litt bonus fra undervisning 230522
+// denne funksjonen påvirker variabelen som ligger utenfor
+let a = 5
+function test() {
+    a = 20
+}
+test()
+console.log(a)
+
+// denne funksjonen påvirker IKKE 
+let b = 5
+function test2(num) {
+    return num * 2
+}
+test2()
+console.log(test2(b))
+
+//
+let nums = [1,2,3,4,5]
+
+function doubleNums(array) {
+    const newArray = [...array]
+    for (let index = 0; index < array.length; index++) {
+        array[index] *= 2
+    }
+    return newArray
+}
+
+console.log(doubleNums(nums))
+console.log(nums)

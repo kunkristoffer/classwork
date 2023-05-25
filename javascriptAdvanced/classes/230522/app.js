@@ -45,7 +45,7 @@ function howLongAgo(timestamp) {
 
  const value = timestamp - Date.now();
  let valueDifference = 0;
- let differenceType = "";
+ let differenceType = '';
 
  switch (true) {
   case (value > 1000 * 60 * 60 * 24 * 7):
@@ -69,10 +69,7 @@ function howLongAgo(timestamp) {
   console.log(value <= 1000 * 60 * 60)
  }
 
- console.log(Date.now() - timestamp)
-
- return relativeTF.format(valueDifference, "day");
- 
+ return relativeTF.format(valueDifference, "days");
 }
 
 

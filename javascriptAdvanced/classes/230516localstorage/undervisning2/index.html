@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <script src="js/index.js" type="module"></script>
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .todo-table > div {
+      display: flex;
+      justify-content: space-between;
+    }
+    .todo-table {
+      background-color: #888;
+    }
+    .todo-table:nth-child(2) {
+      background-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="my-form">
+    <p id="paragraph">Todolist</p>
+    <input type="text" id="text-input" placeholder="Enter what you want to do">
+
+    <button>Add todo</button>
+  </form>
+
+  <div id="todo-pending" class="todo-table"></div>
+
+</body>
+</html>

@@ -42,6 +42,10 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+   margin: 5px 0;
+  }
+  #todo-pending button {
+   padding: 5px;
   }
   #disclaimer {
    position: absolute;
@@ -50,50 +54,55 @@
    bottom: 0;
    margin: 10px;
   }
-  #form-element button, #form-sort {
-   padding: 5px 15px;
+  .btn1 {
+    padding: 5px 15px;
   }
   input {
    width: 100%;
   }
+  button, select {
+    border: none;
+  }
+  label {
+    display: flex;
+  }
   .flex {
    display: flex;
-   flex-flow: wrap row; 
    justify-content: space-between;
   }
   #todo-completed {
    color: gray;
    font-size: 12px;
   }
+  #todo-pending button {
+    background-color: gray;
+  }
  </style>
 </head>
 <body>
  <div id="wrapper">
    <div id="input">
+    <h1>Todolist</h1>
     <form id="form-element" class="flex">
-     <h1>Todolist</h1>
-     <button>Add</button>
      <input type="text" id="form-input" placeholder="enter your something you want to do">
+     <button class="btn1">Add</button>
    </form>
    </div>
    <div id="output">
+    <h2>Pending</h2>
     <form id="form-desc" class="flex">
-     <h2>Pending</h2>
-     <label for="sortby">
-      sort by:
-      <select name="sortby" id="form-sort">
-       <option data-sortby="name" data-sortdir="asc">Name Asc</option>
-       <option data-sortby="name" data-sortdir="desc">Name Desc</option>
-       <option data-sortby="id" data-sortdir="asc">Date Asc</option>
-       <option data-sortby="id" data-sortdir="desc">Date Desc</option>
-      </select>
-     </label>
-     <!-- <input type="text" id="form-search" placeholder="Search todo"> -->
+    <input type="text" id="form-search" placeholder="Search todo">
+    <select id="form-sort" class="btn1">
+      <option data-sortby="name" data-sortdir="asc">Name Asc</option>
+      <option data-sortby="name" data-sortdir="desc">Name Desc</option>
+      <option data-sortby="id" data-sortdir="asc">Date Asc</option>
+      <option data-sortby="id" data-sortdir="desc">Date Desc</option>
+    </select>
     </form>
     <div id="todo-pending"></div>
     <div class="flex">
      <h2>Completed</h2>
-     <button id="todo-clear">Clear</button>
+     <button id="todo-clear" class="btn1" style="background-color: brown; color: white;">Clear</button>
     </div>
     <div id="todo-completed"></div>
    </div>

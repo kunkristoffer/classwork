@@ -1,6 +1,6 @@
 # Todo List v2
 ---
-Contains following changes since version 1
+Contains following changes since [version 1](https://github.com/kristofferfh/classwork/tree/main/javascriptAdvanced/classes/230516localstorage)
 * test
 * test 2
 ---

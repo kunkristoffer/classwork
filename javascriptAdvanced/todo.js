@@ -13,6 +13,7 @@
  * .filter 
  * .map 
  * .spread 
+ * .sort
  */
 
 /**

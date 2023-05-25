@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <link rel="shortcut icon" href="#" type="image/x-icon" />
  <title>Todolist v2</title>
- <script src="js/index.js" defer></script>
+ <script src="js/index.js" type="module" defer></script>
  <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
   * {
@@ -24,10 +24,24 @@
    justify-content: center;
    height: 100vh;
   }
+  h1,h2 {
+   color: brown;
+  }
   #wrapper {
    background-color: #ffffff0c;
    padding: 20px 50px;
    border-radius: 5px;
+  }
+  #wrapper > div,
+  #output > div
+   {
+   margin-bottom: 20px;
+  }
+  #todo-pending > div,
+  #todo-completed > div {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
   }
   #disclaimer {
    position: absolute;
@@ -35,13 +49,53 @@
    color:orange;
    bottom: 0;
    margin: 10px;
-  }  
+  }
+  #form-element button, #form-sort {
+   padding: 5px 15px;
+  }
+  input {
+   width: 100%;
+  }
+  .flex {
+   display: flex;
+   flex-flow: wrap row; 
+   justify-content: space-between;
+  }
+  #todo-completed {
+   color: gray;
+   font-size: 12px;
+  }
  </style>
 </head>
 <body>
  <div id="wrapper">
-   <div id="input"></div>
-   <div id="output"></div>
+   <div id="input">
+    <form id="form-element" class="flex" style="">
+     <h1>Todolist</h1>
+     <button>Add</button>
+     <input type="text" id="form-input" placeholder="enter your something you want to do">
+   </form>
+   </div>
+   <div id="output">
+    <form id="form-desc" class="flex">
+     <h2>Pending</h2>
+     <label for="sortby">
+      sort by:
+      <select name="sortby" id="form-sort">
+       <option data-sortby="name" data-sortdir="asc">Name Asc</option>
+       <option data-sortby="name" data-sortdir="desc">Name Desc</option>
+       <option data-sortby="date" data-sortdir="asc">Date Asc</option>
+       <option data-sortby="date" data-sortdir="desc">Date Desc</option>
+      </select>
+     </label>
+     <input type="text" id="form-search" placeholder="Search todo">
+    </form>
+    <div id="todo-pending"></div>
+    <div class="flex">
+     <h2>Completed</h2>
+    </div>
+    <div id="todo-completed"></div>
+   </div>
  </div>
  <a id="disclaimer" href="https://github.com/kristofferfh/classwork/tree/main/javascriptAdvanced/classes/230525todoList"><span>github</span></a>
 </body>

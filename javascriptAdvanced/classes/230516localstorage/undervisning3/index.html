@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <script src="js/index.js" type="module"></script>
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .todo-table > div {
+      display: flex;
+      justify-content: space-between;
+    }
+    .todo-table {
+      background-color: #888;
+    }
+    .todo-table:nth-child(2) {
+      background-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Todolist</h1>
+  <form id="my-form">
+    <input type="text" id="text-input" placeholder="Enter what you want to do">
+
+    <button>Add todo</button>
+  </form>
+
+  <h2>Pending todo's</h2>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+    <input type="text" id="search-todos" placeholder="Find a todo by name">
+    Order by: 
+      <button id="sort-name-asc">Name Asc</button>
+      <button id="sort-name-desc">Name Desc</button>
+      <button id="sort-date-asc">Date Asc</button>
+      <button id="sort-date-desc">Date Desc</button>
+  </div>
+  <div id="todo-pending" class="todo-table"></div>
+
+  <h2>Completed todo's</h2>
+  <div id="todo-completed" class="todo-table"></div>
+</body>
+</html>

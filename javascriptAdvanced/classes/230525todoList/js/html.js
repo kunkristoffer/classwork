@@ -28,7 +28,6 @@ export function createTodoCompletedHtml(text, todoId) {
  * Creates an HTML representation of a todo item and appends it to the todoPendingContainer.
  * @param {string} text - The text content of the todo item.
  * @param {string} todoId - The unique identifier for the todo item.
- * @returns {void}
  */
 export function createTodoPendingHtml(text, todoId) {
  const container = document.createElement("div"); 
@@ -40,7 +39,7 @@ export function createTodoPendingHtml(text, todoId) {
  timeCreated.style.color = "grey";
  
  const button = document.createElement("button");
- button.textContent = "Complete todo";
+ button.textContent = "Complete";
  
  // add event listener to the remove todo button
  button.addEventListener("click", () => completeTodo(container, todoId, text));
@@ -49,7 +48,12 @@ export function createTodoPendingHtml(text, todoId) {
  todoPending.appendChild(container);
 }
 
-// update a todo item, set it as isComplete to true, update local storage, and update the webpage with new data
+/**
+ * update a todo item, set it as isComplete to true, update local storage, and update the webpage with new data
+ * @param {*} element 
+ * @param {*} todoId 
+ * @param {*} text 
+ */
 function completeTodo(element, todoId, text) {
   updateTodoArray(todoId)
   updateLocalStorage()
@@ -60,28 +64,23 @@ function completeTodo(element, todoId, text) {
 }
 
 /**
- * 
- * @param {*} array 
- * @param {*} orderBy 
- * @param {*} order 
+ * Sorts the display in #pending based on inputs
+ * @param {*} array specifies which array to sort
+ * @param {*} orderBy specifies how to sort
+ * @param {*} order specifies which direction to sort
  */
 export function sortPendingTodos(array, orderBy, order) {
+  // Clears the DOM object for data
+  const todoPendingContainer = document.getElementById("todo-pending")
+  todoPendingContainer.textContent = ""
+
+  // Sorts array based on specified data
   const sortedList = sortList(array, {
     sortBy: orderBy,
     order: order
-  })
+  })  
  
-  // remove pending todo html elements from the pending todo container
-  // todo pending elements:
-  const todoPendingContainer = document.getElementById("todo-pending")
- 
-  // remove exisiting pending todos
-  while (todoPendingContainer.firstChild) {
-    todoPendingContainer.firstChild.remove()
-  }
- 
-  todoPendingContainer.textContent = ""
- 
+  // Outputs new data to pending tab
   sortedList.forEach((todoItem) => {
     // console.log(todoItem)
     if (todoItem.isCompleted !== true) createTodoPendingHtml(todoItem.name, todoItem.id)

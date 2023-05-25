@@ -34,7 +34,7 @@ export function formatDate(date) {
 }
 
 /**
- * Updates array
+ * Updates objects with completed = true in the array
  * @param {*} todoId 
  */
 export function updateTodoArray(todoId) {
@@ -50,9 +50,9 @@ export function updateTodoArray(todoId) {
 }
 
 /**
- * 
- * @param {*} list 
- * @param {*} options 
+ * Sorts the todolist array based on name/id and asc/desc
+ * @param {*} list specified array
+ * @param {*} options deconstructed options; sortBy and order
  * @returns 
  */
 export function sortList(list, options) {
@@ -70,4 +70,20 @@ export function sortList(list, options) {
    return 0
  })
  return sortedList
+}
+
+/**
+ * Removes all objects with that is completed from todolist and 
+ * clears the "Completed" DOM element
+ */
+export function removeCompleted() {
+ const todoCompleted = document.getElementById("todo-completed")
+ todoCompleted.textContent = ""
+
+ const todo = todolist.filter((obj) => {
+  return obj.isCompleted !== true;
+ })
+
+ todolist = todo
+ updateLocalStorage()
 }

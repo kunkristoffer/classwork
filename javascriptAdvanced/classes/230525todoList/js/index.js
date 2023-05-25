@@ -1,4 +1,4 @@
-import { todolist, updateLocalStorage, updateTodoArray, sortList, formatDate } from "./data.js"
+import { todolist, updateLocalStorage, updateTodoArray, sortList, formatDate, removeCompleted } from "./data.js"
 import { createTodoPendingHtml, createTodoCompletedHtml, sortPendingTodos} from "./html.js"
 
 // define DOMs
@@ -11,6 +11,7 @@ const formSort = document.getElementById("form-sort")
 const todoPending = document.getElementById("todo-pending")
 const todoCompleted = document.getElementById("todo-completed")
 const sortBtn = document.getElementById("form-sort")
+const todoClear = document.getElementById("todo-clear")
 
 // run on page load
 todolist.forEach((todoItem) => {
@@ -48,8 +49,13 @@ function handleForm(event) {
  formInput.value = "" // reset text input
 }
 
+// attaches eventlistener to main input
 formElement.addEventListener("submit", handleForm)
 
+// attaches eventlistener that removes all completed tasks
+todoClear.addEventListener("click", removeCompleted)
+
+// Changes how pending todo items are sorted
 sortBtn.addEventListener("change", () => {
  const optionIndex = sortBtn.selectedIndex;
  const sortBy = sortBtn.options[optionIndex].dataset.sortby

@@ -28,5 +28,106 @@ body {
  padding: 20px;
  border-radius: 10px;
  background-color: #222;
- 
+}
+#wrapper > div,
+ #wrapper > div > div {
+ margin-bottom: 25px;
+}
+.flex {
+ display: flex;
+}
+h1,h2,h3 {
+ color: orangered;
+}
+input, button, select {
+ border: none;
+}
+input {
+ width: 100%;
+ padding: 5px 10px;
+}
+
+#form > button,
+#form-sort {
+ padding: 10px;
+}
+
+#form {
+
+}
+
+
+#pending > div > div > div {
+ display: none;
+}
+#pending > div:hover > div > div {
+ display: inline-block;
+}
+
+#pending button {
+ background: none;
+}
+#pending button {
+ transition: scale 0.2s ease-in-out;
+}
+#pending button:hover {
+ scale: 1.5;
+}
+
+#pending > div > div {
+ display: flex;
+ justify-content: space-between;
+}
+#pending > div  {
+ padding: 5px;
+ border-radius: 5px;
+ transition: background-color 0.3s ease;
+}
+#pending > div:hover  {
+ background-color: #333;
+}
+
+
+#pending > div,
+#completed > div {
+ margin: 5px 0;
+ display: flex;
+ flex-flow: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.date {
+ color: gray;
+}
+
+
+
+#clear {
+ display: none;
+ text-align: center;
+}
+#test:not(:has(#completed:empty)) #clear {
+ /* I do not like css logic */
+ display: block;
+}
+#clear div {
+ display: flex;
+ align-content: space-between;
+}
+#clear button {
+ padding: 5px;
+ width: 50%;
 }

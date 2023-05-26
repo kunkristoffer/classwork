@@ -71,6 +71,17 @@ export function completeTodo(element, text, date) {
  createHtml(text, date, true)
 }
 
+
+
+export function removeTodo(element, text, date) {
+  todolist = todolist.filter((obj) => {
+    return obj.date !== date;
+  })
+  
+  updateLocalStorage()
+  element.remove()
+}
+
 /**Removes all objects marked with completed */
 export function removeCompleted() {
  outputCompleted.textContent = ""

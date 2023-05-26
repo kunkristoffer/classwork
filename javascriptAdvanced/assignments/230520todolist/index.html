@@ -13,7 +13,7 @@
  <div id="wrapper">
   <div>
    <h1><span style="text-decoration: line-through;">todo</span> Postpone list</h1>
-   <form id="form">
+   <form id="form" class="flex">
     <input id="form-input" type="text" name="" placeholder="What do you want to do?">
     <button type="submit">Submit</button>
    </form>
@@ -21,7 +21,7 @@
   <div>
    <div>
     <h2>Pending</h2>
-    <div id="form-pending">
+    <div id="form-pending" class="flex">
      <input id="form-search" type="search" name="" placeholder="search list for...">
      <select id="form-sort" class="button-select">
       <option data-sortby="text" data-sortdir="asc">Name Asc</option>
@@ -32,14 +32,16 @@
     </div>
     <div id="pending"></div>
    </div>
-   <div>
+   <div id="test">
     <h2>Completed</h2>
     <div id="completed"></div>
-    <div>
-     <h3>remove</h3>
+    <div id="clear">
+      <h3>remove</h3>
+      <div>
+        <button id="form-clear">completed</button>
+        <button id="form-clear-all">everything</button>
+      </div>
     </div>
-    <button id="form-clear">completed</button>
-    <button id="form-clear-all">everything</button>
    </div>
   </div>
  </div>

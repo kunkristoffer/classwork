@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="#" type="image/x-icon">
+ <link rel="stylesheet" href="scr/style.css">
+ <script src="scr/index.js" type="module" defer></script>
+ <title>todolist assignment 23/05/20</title>
+</head>
+<body>
+ <div id="wrapper">
+  <div>
+   <h1><span style="text-decoration: line-through;">todo</span> Postpone list</h1>
+   <form id="form">
+    <input id="form-input" type="text" name="" placeholder="What do you want to do?">
+    <button type="submit">Submit</button>
+   </form>
+  </div>
+  <div>
+   <div>
+    <h2>Pending</h2>
+    <div id="form-pending">
+     <input id="form-search" type="search" name="" placeholder="search list for...">
+     <select id="form-sort" class="button-select">
+      <option data-sortby="text" data-sortdir="asc">Name Asc</option>
+      <option data-sortby="text" data-sortdir="desc">Name Desc</option>
+      <option data-sortby="date" data-sortdir="asc">Date Asc</option>
+      <option data-sortby="date" data-sortdir="desc">Date Desc</option>
+    </select>
+    </div>
+    <div id="pending"></div>
+   </div>
+   <div>
+    <h2>Completed</h2>
+    <div id="completed"></div>
+    <div>
+     <h3>remove</h3>
+    </div>
+    <button id="form-clear">completed</button>
+    <button id="form-clear-all">everything</button>
+   </div>
+  </div>
+ </div>
+ <a id="disclaimer" href="https://github.com/kristofferfh/classwork/tree/main/javascriptAdvanced/assignments/230520todolist"><span>github</span></a>
+</body>
+</html>

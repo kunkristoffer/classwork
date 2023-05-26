@@ -80,11 +80,10 @@ export function removeCompleted() {
  const todoCompleted = document.getElementById("todo-completed")
  todoCompleted.textContent = ""
 
- const todo = todolist.filter((obj) => {
+ todolist.filter((obj) => {
   return obj.isCompleted !== true;
  })
 
- todolist = todo
  updateLocalStorage()
 }
 

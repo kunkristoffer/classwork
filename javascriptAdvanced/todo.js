@@ -18,6 +18,8 @@
 
 /**
  * Hvordan påvirker funksjoner const/let som er global og local scope?
+ * const array1 = array2; påvirker hverandre
+ * const array1 = [...array2] gjør ikke det!
  */
 
 /**
@@ -30,4 +32,12 @@ const {name, name2} = test
  * do
  * while
  * if
+ */
+
+/**
+ * callback i funksjoner?
+ * du kn skrive en funksjon inni parameters:
+ * console.log("test", funksjon)
+ * du kan også ha
+ * console.log("test", (arg) => {...    })
  */

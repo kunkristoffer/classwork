@@ -88,6 +88,21 @@ export function sortPendingTodos(array, orderBy, order) {
  }
 
 
+ // Filtering functionality
+ // filteredList(todolist, "test")
+ function filterPendingTodos(array, term) {
+  // Clears the DOM object for data
+  const todoPendingContainer = document.getElementById("todo-pending")
+  todoPendingContainer.textContent = ""
+
+  const filteredList = array.filter((todoItem) => {
+    todolist.name.includes(term)
+    return true
+  })
+  todoPendingContainer.textContent = filteredList
+  todoCompleted.append(todoPendingContainer)
+ }
+
 
 
 

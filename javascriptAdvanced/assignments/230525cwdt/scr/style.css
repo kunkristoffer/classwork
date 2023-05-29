@@ -23,14 +23,16 @@ body {
 
 #wrapper {
  display: flex;
- padding: 20px 50px;
+ justify-content: space-around;
+ padding: 10px;
  border-radius: 5px;
  background-color: #222;
 }
-#cwdt-header div {
- border: 2px solid;
- padding: 5px 20px;
+#wrapper > div {
+width: 50%;
 }
+
+
 #cwdt-config {
  display: flex;
  flex-flow: column;
@@ -54,4 +56,33 @@ body {
 #class-select {
  display: grid;
  grid-template-columns: 1fr 1fr;
+}
+
+/* CWDT table styling */
+.green {
+ background-color: green;
+}
+.red {
+ background-color: red;
+}
+.green:hover {
+ background-color: rgb(3, 148, 3) !important;
+}
+
+#cwdt-header,
+#cwdt-content {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ margin: 0 5px;
+}
+
+#cwdt-header div,
+#cwdt-content div {
+ padding: 5px;
+ border: 2px solid #2e2e2e;
+ text-align: center;
+}
+
+#cwdt-content div:hover {
+ background-color: #ffffff10;
 }

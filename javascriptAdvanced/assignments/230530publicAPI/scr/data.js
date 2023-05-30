@@ -1,5 +1,3 @@
-import {WeatherRequest,newsRequest} from "./fetch.js"
-
 export const localStorageKeyWeather = "apiWeatherData"
 export const localStorageKeyNews = "apiNewsData"
 

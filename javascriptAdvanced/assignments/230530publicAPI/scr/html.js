@@ -1,5 +1,5 @@
 import {outputNews,outputWeather} from "./index.js"
-import {weatherData,newsData,updateLocalStorage,localStorageKeyWeather,localStorageKeyNews} from "./data.js"
+import {weatherData,newsData} from "./data.js"
 
 export function weatherDataOutputHtml() {
  const imgNow = document.createElement("img")
@@ -17,7 +17,7 @@ export function weatherDataOutputHtml() {
 }
 
 export function newsDataOutputHtml() {
- const items = outputNews.querySelectorAll("item");
+ const items = newsData.querySelectorAll("item");
  items.forEach(el => {
   const para = document.createElement("p")
   para.textContent = el

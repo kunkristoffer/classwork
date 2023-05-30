@@ -17,6 +17,14 @@ body {
  font-size: 16px;
 }
 
+#disclaimer {
+ position: absolute;
+ text-decoration: none;
+ color:orange;
+ bottom: 0;
+ margin: 10px;
+}
+
 .flex {
  display: flex;
 }

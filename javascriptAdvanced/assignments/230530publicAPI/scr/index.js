@@ -11,13 +11,14 @@ const buttonOutputWeather = document.getElementById("button-get-weather").addEve
 const buttonOutputNews = document.getElementById("button-get-news").addEventListener("click", newsRequest)
 
 // if localstorage is empty, fetch new data
-if (weatherData.length == 0) {
+if (weatherData.length === 0) {
  weatherRequest()
 }
-if (newsData.length == 0) {
+
+if (newsData.length === 0) {
  newsRequest()
 }
 
 // outputs data to DOM
 weatherDataOutputHtml()
-newsDataOutputHtml()
+// newsDataOutputHtml()

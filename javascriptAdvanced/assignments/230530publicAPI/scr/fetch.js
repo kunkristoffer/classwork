@@ -1,5 +1,5 @@
 import {} from "./index.js"
-import {updateLocalStorage,localStorageKeyWeather,localStorageKeyNews} from "./data.js"
+import {updateLocalStorage,localStorageKeyWeather,localStorageKeyNews,newsData} from "./data.js"
 
 
 /**
@@ -16,11 +16,21 @@ export async function weatherRequest() {
 
 export async function newsRequest() {
  // https://www.nrk.no/rss/
- const newsFetch = await fetch("www.nrk.no/nyheter/siste.rss ")
- const newsData = await newsFetch.text()
- const newsXml = new window.DOMParser().parseFromString(newsData, "text/xml")
+ const newsFetch = await fetch("https://www.nrk.no/nyheter/siste.rss")
+ const newsDataTmp = await newsFetch.text()
+ const newsXml = new DOMParser().parseFromString(newsDataTmp, "text/xml")
  
- updateLocalStorage(localStorageKeyNews, newsData)
+console.log(newsData);
+console.log("newsDataTmp"+ typeof newsDataTmp);
+console.log(newsXml);
+
+ updateLocalStorage(localStorageKeyNews, newsXml)
+}
+
+export async function newsRequest2() {
+ fetch("https://jsonplaceholder.typicode.com/users")
+ .then(response => response.json())
+ .then(data => console.log(data))
 }
 
 
@@ -30,10 +40,10 @@ export async function newsRequest() {
 
 /**
  * Requests data in desired format
+ * @param {*} type type of data; object or xml
  * @param {*} url url of api endpoint
- * @param {*} type type of data
  */
-async function apiRequest(url, type) {
+async function apiRequest(type,url) {
  try {
   const request = await fetch(url)
  }

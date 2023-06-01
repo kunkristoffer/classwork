@@ -1,8 +1,8 @@
 export const localStorageKeyWeather = "apiWeatherData"
 export const localStorageKeyNews = "apiNewsData"
 
-export let weatherData = JSON.parse(localStorage.getItem(localStorageKeyWeather)) || []
-export let newsData = localStorage.getItem(localStorageKeyNews) || []
+export let weatherData = JSON.parse(localStorage.getItem(localStorageKeyWeather)) || {};
+export let newsData = JSON.parse(localStorage.getItem(localStorageKeyNews)) || {};
 
 /**
  * 

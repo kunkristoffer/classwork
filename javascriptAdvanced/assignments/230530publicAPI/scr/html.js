@@ -25,10 +25,11 @@ export function weatherDataOutputHtml() {
 
  const timeSpan = [1,12,24,36,48]
  const timeSpanContainer = document.createElement("div")
- for (let i = 0; i < timeSpan.length; i++) {
-  const test = htmlText(timeSpan[i]+"h")
-  const weather = htmlWeatherIcon(weatherData.timeseries[timeSpan[i]].data.next_1_hours.summary.symbol_code)
-  timeSpanContainer.append(test, weather)
+ for (let i = 1; i < 9; i++) {
+  const increment = i * 6
+  const text = htmlText(increment+"h")
+  const weather = htmlWeatherIcon(weatherData.timeseries[increment].data.next_1_hours.summary.symbol_code)
+  timeSpanContainer.append(text, weather)
  }
 
  outputWeather.append(greetingContainer,timeSpanContainer)
@@ -37,8 +38,8 @@ export function weatherDataOutputHtml() {
 export function newsDataOutputHtml() {
  const items = newsData.querySelectorAll("item");
  items.forEach(el => {
-  const para = document.createElement("p")
-  para.textContent = el
-  outputNews.append(para)
+  const para = document.createElement("p");
+  para.textContent = el;
+  outputNews.append(para);
  })
 }

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ background-color: #111;
+ color:whitesmoke;
+}
+
+
+#disclaimer {
+ position: absolute;
+ text-decoration: none;
+ color:orange;
+ bottom: 0;
+ margin: 10px;
+}
+nav {
+
+}
+main {
+
+}
+footer {
+
+}
+
+.poke-font {
+ font-family: 'Press Start 2P', cursive;
+}
+
+#poke-all {
+ display: flex;
+ flex-flow: column wrap;
+}
+#poke-all p {
+ margin-right: 1ch;
+}

@@ -9,7 +9,7 @@ const pokeDialog = document.getElementById("poke-details")
 showDialog.addEventListener("click", () => {
  // pokedexGetAllNames()
  // pokeDialog.showModal();
- // displayPokeNameAll()
+ // 
  pokedexGetPokemon("Charizard")
 })
 
@@ -19,4 +19,5 @@ pokeDialog.addEventListener("click", () => {
  }
 });
 
-displayPokeCard();
+displayPokeNameAll()
+// displayPokeCard();

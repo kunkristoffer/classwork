@@ -7,6 +7,7 @@
  <link rel="shortcut icon" href="#" type="image/x-icon">
  <title>Assignment: Pokedex</title>
  <link rel="stylesheet" href="src/style.css">
+ <link rel="stylesheet" href="src/pokedex.css">
  <script src="src/index.js" type="module" defer></script>
 </head>
 <body>
@@ -14,10 +15,39 @@
 
  </nav>
  <main>
+  <div id="pokedex-container" class="flex">
+   <div id="pokedex-left" class="flex">
+    <div id="pokedex-left-top" class="flex"></div>
+    <div id="pokedex-left-center" class="flex">
+     <div id="poke-card-output"></div>
+    </div>
+    <div id="pokedex-left-bottom" class="flex"></div>
+   </div>
+   <div id="pokedex-left-closed" class="flex"></div>
+   <div id="pokedex-center" class="flex"></div>
+   <div id="pokedex-right" class="flex">
+    <div id="pokedex-right-top" class="flex">
+     <div id="pokedex-right-top-left" class="flex"></div>
+     <div id="pokedex-right-top-right" class="flex">
+      <div id="pokedex-right-top-right-rotate" class="flex"></div>
+     </div>
+    </div>
+    <div id="pokedex-right-bottom" class="flex"></div>
+   </div>
+  </div>
+
+
+
+
+
+
+
+
+
   <div id="poke-search">
 
   </div>
-  <div id="poke-card-output"></div>
+  
  </main>
  <footer>
   <a id="disclaimer" href="https://github.com/kristofferfh/classwork/tree/main/javascriptAdvanced/assignments/230601pokedex"><span>github</span></a>

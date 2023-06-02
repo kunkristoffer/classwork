@@ -50,3 +50,18 @@ export async function displayPokeCard() {
  container.append(title, img)
  pokeCardOutput.append(container)
 }
+
+
+
+
+
+
+
+
+
+
+/* function createEl(type="div",param) {
+ const element = Object.assign(document.createElement(type), param);
+ return element
+} */
+// const picture = createEl("img",{className:"pic-class",id:"pic-id",src:"pic.png"});

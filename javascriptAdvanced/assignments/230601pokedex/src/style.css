@@ -32,15 +32,3 @@ main {
 footer {
 
 }
-
-.poke-font {
- font-family: 'Press Start 2P', cursive;
-}
-
-#poke-all {
- display: flex;
- flex-flow: column wrap;
-}
-#poke-all p {
- margin-right: 1ch;
-}

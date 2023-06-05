@@ -27,10 +27,11 @@ export async function pokedexGetAllNames() {
 }
 
 export async function pokedexGetPokemon(name) {
- const data = await apiRequest("pokemon/"+name.toLowerCase())
-
- console.log(data);
- // return data
+ if (!localStorage.getItem(`pokedexPokemon${name}`)) {
+  const data = await apiRequest(`pokemon/${name.toLowerCase()}`)
+  localStorage.setItem(`pokedexPokemon${name}`, JSON.stringify(data))
+ } 
+ return JSON.parse(localStorage.getItem(`pokedexPokemon${name}`))
 }
 
 // detail.sprites.other["official-artwork"].["front_default"]

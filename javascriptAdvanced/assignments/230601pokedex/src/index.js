@@ -6,18 +6,40 @@ import {} from "./modal.js"
 const showDialog = document.getElementById("poke-details-show")
 const pokeDialog = document.getElementById("poke-details")
 
-showDialog.addEventListener("click", () => {
+// Gets name of all pokemons
+pokedexGetAllNames()
+
+// displays pokemon information
+displayPokeNameAll()
+displayPokeCard("bulbasaur");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Modal interface
+/* showDialog.addEventListener("click", () => {
  // pokedexGetAllNames()
  // pokeDialog.showModal();
  // 
  pokedexGetPokemon("Charizard")
-})
-
-pokeDialog.addEventListener("click", () => {
+}) */
+/* pokeDialog.addEventListener("click", () => {
  if (event.target === pokeDialog) {
   pokeDialog.close();
  }
-});
+}); */
 
-displayPokeNameAll()
-// displayPokeCard();

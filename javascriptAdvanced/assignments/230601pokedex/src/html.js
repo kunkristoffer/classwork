@@ -4,7 +4,8 @@ import {pokedexGetPokemon} from "./fetch.js"
 
 // Define inputs/outputs
 const pokeSearch = document.getElementById("poke-search")
-const pokeCardOutput = document.getElementById("poke-card-output") 
+const pokeOutputLeft = document.getElementById("poke-card-output-left")
+const pokeOutputRight = document.getElementById("poke-card-output-right")  
 
 
 /**Shortcut function for creating elements
@@ -35,20 +36,35 @@ switch (type) {
 
 export async function displayPokeNameAll() {
  const container = cElem("div","","poke-font","poke-all")
- for (const pokemon of pokedexAllNames) {
-  const name = cElem("p",pokemon.name)
-  container.append(name)
+ for (let i = 0; i < pokedexAllNames.length; i++) {
+  const line = cElem("div")
+  const number = cElem("p",i+1)
+  const name = cElem("p",pokedexAllNames[i].name)
+  line.addEventListener("click", () => displayPokeCard(pokedexAllNames[i].name))
+  line.append(number,name)
+  container.append(line)
  }
- pokeCardOutput.append(container)
+ pokeOutputRight.append(container)
 }
 
-export async function displayPokeCard() {
+export async function displayPokeCard(name) {
+ const pokemon = await pokedexGetPokemon(name)
+ const {abilities,sprites,stats,types,weight} = pokemon
+ 
  const container = cElem("div","","poke-card")
- const title = cElem("h2","Pokecard","poke-font")
- const img = cElem("img","")
+ const containerStats = cElem("div","","","poke-card-stats")
+ const title = cElem("h2",name,"poke-font")
+ const img = cElem("img",sprites.other["official-artwork"].front_default)
 
- container.append(title, img)
- pokeCardOutput.append(container)
+ for (const stat of stats) {
+  const statName = cElem("p",stat.stat.name)
+  const statValue = cElem("p",stat.base_stat)
+  const statBlock = cElem("div")
+  statBlock.append(statName,statValue)
+  containerStats.append(statBlock)
+ }
+ container.append(img,title,containerStats)
+ pokeOutputLeft.replaceChildren(container)
 }
 
 

@@ -13,23 +13,6 @@ pokedexGetAllNames()
 displayPokeNameAll()
 displayPokeCard("bulbasaur");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Modal interface
 /* showDialog.addEventListener("click", () => {
  // pokedexGetAllNames()
@@ -42,4 +25,3 @@ displayPokeCard("bulbasaur");
   pokeDialog.close();
  }
 }); */
-

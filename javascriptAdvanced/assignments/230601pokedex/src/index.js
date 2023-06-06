@@ -13,6 +13,30 @@ pokedexGetAllNames()
 displayPokeNameAll()
 displayPokeCard("bulbasaur");
 
+// Opening and closing the pokedex
+const pokedexDisplay = document.getElementById("pokedex-container")
+const pokedexDisplayLeft = document.getElementById("pokedex-left")
+const pokedexDisplayRight = document.getElementById("pokedex-right")
+const pokedexDisplayClosed = document.getElementById("pokedex-left-closed")
+
+// open
+pokedexDisplayClosed.addEventListener("click", () => {
+ pokedexDisplayLeft.style.display = "flex"
+ pokedexDisplayRight.style.display = "flex"
+ pokedexDisplayClosed.style.display = "none"
+})
+
+// close
+document.addEventListener("click", (event) => {
+ if (event.target.tagName === "BODY") {
+  pokedexDisplayLeft.style.display = "none"
+  pokedexDisplayRight.style.display = "none"
+  pokedexDisplayClosed.style.display = "flex"
+ }
+})
+
+// closes
+
 // Modal interface
 /* showDialog.addEventListener("click", () => {
  // pokedexGetAllNames()

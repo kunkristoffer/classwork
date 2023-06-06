@@ -16,11 +16,17 @@
  height: 1000px;
 }
 #pokedex-left-closed {
- display: none;
+ display: flex;
+ border-radius: 100px 0 0 100px;
  width: 500px;
  background-color: red;
+ flex-flow: column nowrap;
+ justify-content: center;
+ align-items: center;
+ font-size: 1em;
 }
 #pokedex-left {
+ display: none;
  border-radius: 100px 0 0 100px;
  width: 500px;
  flex-flow: column;
@@ -46,6 +52,7 @@ height: 250px;
 }
 #pokedex-right {
  width: 500px;
+ display: none;
  flex-flow: column nowrap;
 }
 #pokedex-right-top {

@@ -16,19 +16,11 @@ body {
 }
 
 .flex{display: flex;}
+
 #disclaimer {
  position: absolute;
  text-decoration: none;
  color:orange;
  bottom: 0;
  margin: 10px;
-}
-nav {
-
-}
-main {
-
-}
-footer {
-
 }

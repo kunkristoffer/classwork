@@ -26,6 +26,14 @@ pokedexDisplayClosed.addEventListener("click", () => {
  pokedexDisplayClosed.style.display = "none"
 })
 
+function pokedexOpen() {
+ pokedexDisplayLeft.style.display = "flex"
+ pokedexDisplayRight.style.display = "flex"
+ pokedexDisplayClosed.style.display = "none"
+}
+pokedexOpen();
+
+
 // close
 document.addEventListener("click", (event) => {
  if (event.target.tagName === "BODY") {
@@ -34,8 +42,6 @@ document.addEventListener("click", (event) => {
   pokedexDisplayClosed.style.display = "flex"
  }
 })
-
-// closes
 
 // Modal interface
 /* showDialog.addEventListener("click", () => {

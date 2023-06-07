@@ -1,7 +1,3 @@
-.poke-font {
- font-family: 'Press Start 2P', cursive;
-}
-
 #poke-all {
  height: 100%;
  flex-flow: column nowrap;
@@ -41,7 +37,10 @@ height: 250px;
  height: 100%;
  margin: 10px;
  padding: 10px;
- overflow-y: auto;
+}
+#poke-card-output-left {
+ background-color: #c3c8b1;
+ width: 100%;
 }
 #pokedex-left-bottom {
  height: 200px;
@@ -79,7 +78,12 @@ height: 250px;
  border-radius: 0 0  100px 0;
  background-color: red;
 }
-
+#poke-card {
+ padding: 1rem;
+}
+#poke-card img {
+ width: 100%;
+}
 #poke-card-output-right {
  height: 300px;
  width: 100%;
@@ -92,8 +96,79 @@ height: 250px;
 }
 #poke-card-stats {
  width: 50%;
+ font-size: 0.8em;
 }
 #poke-card-stats > div {
  display: flex;
  justify-content: space-between;
 }
+#poke-card-title {
+ display: flex;
+ align-items: center;
+}
+
+/* Coloring pokemon types */
+#poke-card-types {
+ display: flex;
+}
+#poke-card-types p {
+ padding:  5px 10px;
+ margin: 0 5px;
+ border-radius: 15px;
+ font-size: 0.8em;
+}
+.bug {
+ background-color:#729f3f;
+}
+.dark {
+ background-color:#707070;
+}
+.dragon {
+ background-color:#53a4cf;
+}
+.electric {
+ background-color:#eed535;
+}
+.fairy {
+ background-color:#fdb9e9;
+}
+.fighting {
+ background-color:#d56723;
+}
+.fire {
+ background-color:#fd7d24;
+}
+.flying {
+ background-color:#3dc7ef;
+}
+.ghost {
+ background-color:#7b62a3;
+}
+.grass {
+ background-color:#9bcc50;
+}
+.ground {
+ background-color:#f7de3f;
+}
+.ice {
+ background-color:#51c4e7;
+}
+.normal {
+ background-color:#a4acaf;
+}
+.poison {
+ background-color:#b97fc9;
+}
+.psychic {
+ background-color:#f366b9;
+}
+.rock {
+ background-color:#a38c21;
+}
+.steel {
+ background-color:#9eb7b8;
+}
+.water {
+ background-color:#4592c4;
+}
+

@@ -35,7 +35,7 @@ switch (type) {
 }
 
 export async function displayPokeNameAll() {
- const container = cElem("div","","poke-font","poke-all")
+ const container = cElem("div","","","poke-all")
  for (let i = 0; i < pokedexAllNames.length; i++) {
   const line = cElem("div")
   const number = cElem("p",i+1)
@@ -51,10 +51,17 @@ export async function displayPokeCard(name) {
  const pokemon = await pokedexGetPokemon(name)
  const {abilities,sprites,stats,types,weight} = pokemon
  
- const container = cElem("div","","poke-card")
+ const container = cElem("div","","","poke-card")
  const containerStats = cElem("div","","","poke-card-stats")
- const title = cElem("h2",name,"poke-font")
+ const containerTypes = cElem("div","","","poke-card-types")
+ const containerTitle = cElem("div","","","poke-card-title")
+ const title = cElem("h2",name,"")
  const img = cElem("img",sprites.other["official-artwork"].front_default)
+
+ for (const type of types) {
+  const typeName = cElem("p",type.type.name,type.type.name)
+  containerTypes.append(typeName)
+ }
 
  for (const stat of stats) {
   const statName = cElem("p",stat.stat.name)
@@ -63,7 +70,8 @@ export async function displayPokeCard(name) {
   statBlock.append(statName,statValue)
   containerStats.append(statBlock)
  }
- container.append(img,title,containerStats)
+ containerTitle.append(title,containerTypes)
+ container.append(img,containerTitle,containerStats)
  pokeOutputLeft.replaceChildren(container)
 }
 

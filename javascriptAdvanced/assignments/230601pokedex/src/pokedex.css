@@ -1,6 +1,9 @@
 #poke-all {
  height: 100%;
+ padding: 1rem;
+ background-color: #c3c8b1;
  flex-flow: column nowrap;
+ overflow: auto;
 }
 #poke-all p {
  margin-right: 1ch;
@@ -95,8 +98,7 @@ height: 250px;
  font-size: 1.5em;
 }
 #poke-card-stats {
- width: 50%;
- font-size: 0.8em;
+ 
 }
 #poke-card-stats > div {
  display: flex;

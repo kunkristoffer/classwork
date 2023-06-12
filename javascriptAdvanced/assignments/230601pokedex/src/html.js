@@ -37,8 +37,9 @@ switch (type) {
 export async function displayPokeNameAll() {
  const container = cElem("div","","","poke-all")
  for (let i = 0; i < pokedexAllNames.length; i++) {
+    pokedexNumberFix(i)
   const line = cElem("div")
-  const number = cElem("p",i+1)
+  const number = cElem("p",pokedexNumberFix(i+1))
   const name = cElem("p",pokedexAllNames[i].name)
   line.addEventListener("click", () => displayPokeCard(pokedexAllNames[i].name))
   line.append(number,name)
@@ -75,14 +76,15 @@ export async function displayPokeCard(name) {
  pokeOutputLeft.replaceChildren(container)
 }
 
-
-
-
-
-
-
-
-
+function pokedexNumberFix(i) {
+    if (i < 10) {
+        return "00"+1
+    } else if (i < 100) {
+        return "0"+i
+    } else {
+        return i
+    }
+}
 
 /* function createEl(type="div",param) {
  const element = Object.assign(document.createElement(type), param);
